@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+from faker import Faker
 
 
 class Student(models.Model):
@@ -12,7 +13,7 @@ class Student(models.Model):
     address = models.CharField(max_length=255, null=True, blank=True)
 
     def get_info(self):
-        return f'{self.first_name} {self.last_name} {self.birth_date} {self.emails} {self.phone} {self.address}'
+        return f'{self.first_name} | {self.last_name} | {self.birth_date} | {self.emails} | {self.phone} | {self.address}'
 
     @classmethod
     def generate_student(cls):
@@ -20,7 +21,7 @@ class Student(models.Model):
         student = cls(
             first_name=fake.first_name(),
             last_name=fake.last_name(),
-            birth_date=fake.datetime.now(),
+            birth_date=fake.date_of_birth(tzinfo=None, minimum_age=9, maximum_age=55),
             emails=fake.email(),
             phone=fake.phone_number(),
             address=fake.address()

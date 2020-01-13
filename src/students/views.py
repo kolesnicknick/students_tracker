@@ -1,17 +1,22 @@
-from django.http import HttpResponseRedirect, HttpResponseNotFound
+from django.http import HttpResponseRedirect, HttpResponseNotFound, HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-from .models import Student
+from students.models import Student
 
 
 def students(request):
-    # Student.objects.all
-    pass
+    all_studs = list(Student.objects.all())
+
+    response = ''
+    for stud in all_studs:
+        response += (stud.get_info() + '<br>')
+    return render(request, 'student-list.html', context={'students_list': response})
 
 
 def generate_student(request):
-    pass
+    student = Student.generate_student()
+    return HttpResponse(f'{student.get_info()}')
 
 
 def students_add(request):

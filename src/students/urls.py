@@ -8,8 +8,8 @@ from .views import (
 )
 
 urlpatterns = [
-    path('generate_s/', generate_student, name='students-gen'),
-    path('list/', students, name='students'),
-    path('students/add/', students_add, name='students-add'),
-    path('students/edit/<int:pk>', students_edit, name='students-edit'),
+    path('gen/', generate_student, name='students-gen'),
+    path('list/', students, name='students- list'),
+    path('add/', students_add, name='students-add'),
+    path('edit/<int:pk>', students_edit, name='students-edit'),
 ]
