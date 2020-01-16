@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta CHARSET="UTF-8">
-    <title>Basic Title</title>
-</head>
-<body>ADD STUDENT
+{% extends base.html> %}
+
+
+{% block content %}
 <form action="{% url 'students-add' %}" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input name="submit" type="submit">
-</form>
-</body>
-</html>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input name="submit" type="submit">
+{% block content %}

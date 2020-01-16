@@ -6,12 +6,12 @@ from students.models import Student
 
 
 def students(request):
-    all_studs = list(Student.objects.all())
-
-    response = ''
-    for stud in all_studs:
+    queryset = Student.objects.all()
+    fn = request.GET.get('first_name')
+    if fn:
+        queryset = queryset.filter(first_name__isstertswith = fn)
         response += (stud.get_info() + '<br>')
-    return render(request, 'student-list.html', context={'students_list': response})
+    return render(request, 'student-list.html', context={'students_list': queryset})
 
 
 def generate_student(request):
