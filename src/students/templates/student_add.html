@@ -1,9 +1,15 @@
-{% extends base.html> %}
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
 
 
 {% block content %}
-<form action="{% url 'students-add' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input name="submit" type="submit">
-{% block content %}
+<h2>ADD STUDENTIK</h2>
+
+<form action="{% url 'students-add' %}" class="form-group" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <br>
+    <button class="btn btn-success" name="submit" type="submit"> Save student</button>
+</form>
+{% endblock content %}

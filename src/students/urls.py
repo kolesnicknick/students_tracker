@@ -10,6 +10,6 @@ from .views import (
 urlpatterns = [
     path('gen/', generate_student, name='students-gen'),
     path('list/', students, name='students- list'),
-    path('add@/', students_add, name='students-add'),
-    path('edit/<int:pk>', students_edit, name='students-edit'),
+    path('add/', students_add, name='students-add'),
+    path('edit/<int:pk>/', students_edit, name='students-edit'),
 ]

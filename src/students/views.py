@@ -1,7 +1,6 @@
 from django.http import HttpResponseRedirect, HttpResponseNotFound, HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
 from students.models import Student
 
 
@@ -9,9 +8,8 @@ def students(request):
     queryset = Student.objects.all()
     fn = request.GET.get('first_name')
     if fn:
-        queryset = queryset.filter(first_name__isstertswith = fn)
-        response += (stud.get_info() + '<br>')
-    return render(request, 'student-list.html', context={'students_list': queryset})
+        queryset = queryset.filter(first_name__istartswith=fn)
+    return render(request, 'student_list.html', context={'students_list': queryset})
 
 
 def generate_student(request):
@@ -54,4 +52,4 @@ def students_edit(request, pk):
 
     return render(request,
                   'student_edit.html',
-                  context={'form': form})
+                  context={'form': form, 'pk': pk})
