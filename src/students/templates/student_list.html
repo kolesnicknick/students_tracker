@@ -8,7 +8,7 @@
             <span class="input-group-text" id="basic-addon1">@</span>
         </div>
         <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" name="first_name"
-               placeholder="Username" type="text">
+               placeholder="SEARCH STUDENTIK" type="text">
     </div>
     <button class="btn btn-success" type="submit">Search</button>
 </form>
@@ -19,14 +19,23 @@
         <td scope="col"><h4>First name</h4></td>
         <td scope="col"><h4>Last name</h4></td>
         <td scope="col"><h4>Mail</h4></td>
+        <td scope="col"><h4>GroupID</h4></td>
+        <td scope="col"><h4>Action</h4></td>
         {% for student in students_list %}
     <tr>
-        <td><a href="/students/edit/{{ student.id }}">{{ student.id }} </a></td>
+        <td><a href="{% url 'students-edit' pk=student.id %}">{{ student.id }} </a></td>
         <td>{{student.first_name}}</td>
         <td>{{student.last_name}}</td>
         <td>{{student.emails}}</td>
+        <td>{{student.group_id.group_name}}</td>
+        <td>
+            <a href="{% url 'students-edit' pk=student.id %}">Edit</a>
+            <br>
+            <a href="{% url 'students-delete' pk=student.id %}">Delete</a>
+
+        </td>
+
     </tr>
-    <br>
     {% endfor %}
 </table>
 {# students_list|safe #}

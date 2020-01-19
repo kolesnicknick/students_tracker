@@ -6,7 +6,7 @@
 {% block content %}
 <h2>ADD YOUR JEDI</h2>
 
-<form action="{% url 'students-add' %}" class="form-group" method="post">
+<form action="{% url 'teachers-add' %}" class="form-group" method="post">
     {% csrf_token %}
     {{ form|crispy }}
     <br>

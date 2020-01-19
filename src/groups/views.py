@@ -1,6 +1,3 @@
-# Create your views here.
-# Create your views here.
-
 from django.http import HttpResponseRedirect, HttpResponseNotFound, HttpResponse
 from django.shortcuts import render
 
@@ -49,6 +46,6 @@ def group_edit(request, pk):
             from django.urls import reverse
             return HttpResponseRedirect(reverse(groups()))
     else:
-        form = groupAddForm(instance=group)
+        form = GroupAddForm(instance=group)
 
     return render(request, 'group_edit.html', context={'form': form, 'pk': pk})

@@ -1,5 +1,7 @@
 from django.core.management.base import BaseCommand
+from faker.generator import random
 
+from groups.models import Group
 from students.models import Student
 
 
@@ -13,5 +15,13 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        for i in range(options.get('number') or 100):
-            Student.generate_student()
+        Group.objects.all().delete()
+        Student.objects.all().delete()
+
+        groups = [Group.objects.create(group_name=f'name_{i}')
+                  for i in range(10)]
+
+        for i in range(100):
+            student = Student.generate_student()
+            student.group_id = random.choice(groups)
+            student.save()

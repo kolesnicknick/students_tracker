@@ -1,14 +1,18 @@
 from django.http import HttpResponseRedirect, HttpResponseNotFound, HttpResponse
 from django.shortcuts import render
+from django.urls import reverse
 
 from students.models import Student
 
 
 def students(request):
-    queryset = Student.objects.all()
-    fn = request.GET.get('first_name')
+    queryset = Student.objects.all().select_related('group_id')
+    fn = request.GET.get('q')
     if fn:
-        queryset = queryset.filter(first_name__istartswith=fn)
+        q1 = queryset.filter(first_name__istartswith=fn)
+        q2 = queryset.filter(last_name__istartswith=fn)
+        q3 = queryset.filter(emails__istartswith=fn)
+        queryset = q1.union(q2).union(q3)
     return render(request, 'student_list.html', context={'students_list': queryset})
 
 
@@ -45,11 +49,15 @@ def students_edit(request, pk):
         form = StudentsAddForm(request.POST, instance=student)
         if form.is_valid():
             form.save()
-            from django.urls import reverse
-            return HttpResponseRedirect(reverse('students'))
+            return HttpResponseRedirect(reverse('students-list'))
     else:
         form = StudentsAddForm(instance=student)
 
     return render(request,
                   'student_edit.html',
                   context={'form': form, 'pk': pk})
+
+
+def students_delete(request, pk):
+    Student.objects.get(id=pk).delete()
+    return HttpResponseRedirect(reverse('students-list'))
