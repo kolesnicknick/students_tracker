@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+{% block title %}ADD Teacher{% endblock %}
 
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h2>ADD STUDENTIK</h2>
+<h2>ADD YOUR JEDI</h2>
 
 <form action="{% url 'students-add' %}" class="form-group" method="post">
     {% csrf_token %}

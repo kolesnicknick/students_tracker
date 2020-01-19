@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
-{% block title %}LIST OF STUDENTOTA{% endblock %}
+{% block title %}List of Teachers{% endblock %}
 
 {% block content %}
-<form action="/students/list/" method="get">
+<form action="/teachers/list/" method="get">
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">@</span>
         </div>
-        <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" name="first_name"
+        <input aria-describedby="basic-addon1" aria-label="Teacher Name" class="form-control" name="first_name"
                placeholder="Username" type="text">
     </div>
     <button class="btn btn-success" type="submit">Search</button>
@@ -19,12 +19,12 @@
         <td scope="col"><h4>First name</h4></td>
         <td scope="col"><h4>Last name</h4></td>
         <td scope="col"><h4>Mail</h4></td>
-        {% for student in students_list %}
+        {% for teacher in teacher_list %}
     <tr>
-        <td><a href="/students/edit/{{ student.id }}">{{ student.id }} </a></td>
-        <td>{{student.first_name}}</td>
-        <td>{{student.last_name}}</td>
-        <td>{{student.emails}}</td>
+        <td><a href="/teachers/edit/{{ teacher.id }}">{{ teacher.id }} </a></td>
+        <td>{{teacher.first_name}}</td>
+        <td>{{teacher.last_name}}</td>
+        <td>{{teacher.emails}}</td>
     </tr>
     <br>
     {% endfor %}
