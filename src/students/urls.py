@@ -5,7 +5,8 @@ from .views import (
     students,
     students_add,
     students_edit,
-    students_delete
+    students_delete,
+    email
 )
 
 urlpatterns = [
@@ -14,4 +15,5 @@ urlpatterns = [
     path('add/', students_add, name='students-add'),
     path('edit/<int:pk>/', students_edit, name='students-edit'),
     path('delete/<int:pk>/', students_delete, name='students-delete'),
+    path('contact/', email, name='contact'),
 ]

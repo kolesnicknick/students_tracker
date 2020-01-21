@@ -61,3 +61,18 @@ def students_edit(request, pk):
 def students_delete(request, pk):
     Student.objects.get(id=pk).delete()
     return HttpResponseRedirect(reverse('students-list'))
+
+
+def email(request):
+    from students.forms import ContactForm
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('students-list'))
+    else:
+        form = ContactForm()
+
+    return render(request,
+                  'contact.html',
+                  context={'form': form})

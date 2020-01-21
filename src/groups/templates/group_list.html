@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}LIST OF STUDENTOTA{% endblock %}
+
+{% block content %}
+<form action="/group/list/" method="get">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" name="first_name"
+               placeholder="SEARCH STUDENTIK" type="text">
+    </div>
+    <button class="btn btn-success" type="submit">Search</button>
+</form>
+{% for group in group_list %}
+<h1>{{group.name}}</h1>
+{% endfor %}
+<table class="table table-striped">
+    <tr>
+        <td scope="col"><h4>ID</h4></td>
+        <td scope="col"><h4>Group Name</h4></td>
+        <td scope="col"><h4>Senior</h4></td>
+        <td scope="col"><h4>Curator</h4></td>
+
+
+        {% for group in group_list %}
+    <tr>
+        <td><a href="{% url 'group-edit' pk=group.id %}">{{ student.id }} </a></td>
+        <td>{{group.name}}</td>
+        <td>{{group.senior}}</td>
+        <td>{{group.curator}}</td>
+
+        <td>
+            <a href="{% url 'group-edit' pk=group.id %}">Edit</a>
+            <br>
+            <a href="{% url 'group-delete' pk=group.id %}">Delete</a>
+
+        </td>
+
+    </tr>
+    {% endfor %}
+</table>
+{# groups_list|safe #}
+
+{% endblock content %}
+

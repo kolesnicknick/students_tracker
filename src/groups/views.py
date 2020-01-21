@@ -6,7 +6,7 @@ from groups.models import Group
 
 def groups(request):
     qset = Group.objects.all()
-    return render(request, 'group_list.html', context={'group-list', qset})
+    return render(request, 'group_list.html', context={'group-list': qset})
 
 
 def generate_group(request):
