@@ -8,7 +8,6 @@ class Teacher(models.Model):
     last_name = models.CharField(max_length=20)
     emails = models.EmailField()
     phone = models.CharField(max_length=16)
-    assigned_group = models.CharField(max_length=16)
 
     def get_info(self):
         return f'{self.first_name} | {self.last_name} | {self.emails} | {self.phone}'
@@ -21,7 +20,6 @@ class Teacher(models.Model):
             last_name=fake.last_name(),
             emails=fake.email(),
             phone=fake.phone_number(),
-            assigned_group='MD'
         )
         teacher.save()
         return teacher

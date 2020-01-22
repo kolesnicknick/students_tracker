@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}LIST OF STUDENTOTA{% endblock %}
+{% block title %}LIST OF GROUPS {% endblock %}
 
 {% block content %}
 <form action="/group/list/" method="get">
@@ -8,7 +8,7 @@
             <span class="input-group-text" id="basic-addon1">@</span>
         </div>
         <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" name="first_name"
-               placeholder="SEARCH STUDENTIK" type="text">
+               placeholder="SEARCH GROUP" type="text">
     </div>
     <button class="btn btn-success" type="submit">Search</button>
 </form>
@@ -25,10 +25,10 @@
 
         {% for group in group_list %}
     <tr>
-        <td><a href="{% url 'group-edit' pk=group.id %}">{{ student.id }} </a></td>
-        <td>{{group.name}}</td>
-        <td>{{group.senior}}</td>
-        <td>{{group.curator}}</td>
+        <td><a href="{% url 'group-edit' pk=group.id %}">{{ group.id }} </a></td>
+        <td>{{group.group_name}}</td>
+        <td>{{group.senior.first_name}} {{group.senior.last_name}}</td>
+        <td>{{group.curator.first_name}} {{group.senior.last_name}}</td>
 
         <td>
             <a href="{% url 'group-edit' pk=group.id %}">Edit</a>

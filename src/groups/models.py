@@ -6,13 +6,14 @@ from faker import Faker
 class Group(models.Model):
     group_name = models.CharField(max_length=20)
     senior = models.ForeignKey('students.Student',
+                               models.SET_NULL,
                                null=True,
-                               blank=True,
-                               on_delete=models.CASCADE)
+                               blank=True, )
     curator = models.ForeignKey('teachers.Teacher',
+                                models.SET_NULL,
                                 null=True,
                                 blank=True,
-                                on_delete=models.CASCADE)
+                                )
 
     def get_info(self):
         return f'{self.group_name}'

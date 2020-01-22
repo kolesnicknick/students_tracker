@@ -8,6 +8,6 @@
 <form action="{% url 'teachers-edit' pk %}" method="post">
     {% csrf_token %}
     {{ form|crispy }}
-    <button class="btn btn-success" name="submit" type="submit">Update Student</button>
+    <button class="btn btn-success" name="submit" type="submit">Update Teacher</button>
 </form>
 {% endblock content %}

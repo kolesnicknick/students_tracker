@@ -22,16 +22,22 @@ class Command(BaseCommand):
 
         # Create 100 students wo group/teacher
         students = [Student.generate_student() for i in range(100)]
+        print(len(students))
 
         # Create 10 teachers wo group
-        teachers = [Teacher.generate_teacher() for i in range(10)]
+        teachers = [Teacher.gen_teacher() for i in range(10)]
+        print(len(teachers))
 
         # Create 10 groups with random senior/curator
-        groups = [Group.generate_group() for i in range(10)]
+        groups = [Group.gen_group() for i in range(10)]
         for group in groups:
             group.senior = random.choice(students)
             group.curator = random.choice(teachers)
+            group.save()
+            print(group.get_info())
 
         # Update students with random Group
         for student in students:
             student.group_id = random.choice(groups)
+            print(student.group_id)
+            student.save()

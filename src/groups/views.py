@@ -1,12 +1,13 @@
 from django.http import HttpResponseRedirect, HttpResponseNotFound, HttpResponse
 from django.shortcuts import render
+from django.urls import reverse
 
 from groups.models import Group
 
 
 def groups(request):
     qset = Group.objects.all()
-    return render(request, 'group_list.html', context={'group-list': qset})
+    return render(request, 'group_list.html', context={'group_list': qset})
 
 
 def generate_group(request):
@@ -22,7 +23,7 @@ def group_add(request):
         if form.is_valid():
             form.save()
             from django.urls import reverse
-            return HttpResponseRedirect(reverse('groups'))
+            return HttpResponseRedirect(reverse('group-list'))
     else:
         form = GroupAddForm()
 
@@ -49,3 +50,8 @@ def group_edit(request, pk):
         form = GroupAddForm(instance=group)
 
     return render(request, 'group_edit.html', context={'form': form, 'pk': pk})
+
+
+def group_delete(request, pk):
+    Group.objects.get(id=pk).delete()
+    return HttpResponseRedirect(reverse('group-list'))

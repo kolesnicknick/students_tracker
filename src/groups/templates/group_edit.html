@@ -4,11 +4,11 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h2>EDIT STUDENTIK</h2>
+<h2>EDIT GROUP</h2>
 
 <form action="{% url 'group-edit' pk %}" method="post">
     {% csrf_token %}
     {{ form|crispy }}
-    <button class="btn btn-success" name="submit" type="submit">Update Student</button>
+    <button class="btn btn-success" name="submit" type="submit">Update Group</button>
 </form>
 {% endblock content %}

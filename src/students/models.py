@@ -11,12 +11,13 @@ class Student(models.Model):
     phone = models.CharField(max_length=16)
     address = models.CharField(max_length=255, null=True, blank=True)
     group_id = models.ForeignKey('groups.Group',
+                                 models.SET_NULL,
                                  null=True,
-                                 blank=True,
-                                 on_delete=models.CASCADE)
+                                 blank=True)
 
     def get_info(self):
-        return f'{self.first_name} | {self.last_name} | {self.birth_date} | {self.emails} | {self.phone} | {self.address}'
+        return f'{self.first_name} | {self.last_name} | {self.birth_date} |' \
+               f' {self.emails} | {self.phone} | {self.address}'
 
     @classmethod
     def generate_student(cls):
