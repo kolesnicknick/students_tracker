@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'students_tracker.middleware.MiddleWareFileLogger',
 ]
 
 ROOT_URLCONF = 'students_tracker.urls'
