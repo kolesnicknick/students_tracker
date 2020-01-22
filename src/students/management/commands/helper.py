@@ -28,16 +28,26 @@ class Command(BaseCommand):
         teachers = [Teacher.gen_teacher() for i in range(10)]
         print(len(teachers))
 
-        # Create 10 groups with random senior/curator
+        # Create 10 groups wo teacher and senior
         groups = [Group.gen_group() for i in range(10)]
-        for group in groups:
-            group.senior = random.choice(students)
-            group.curator = random.choice(teachers)
-            group.save()
-            print(group.get_info())
 
         # Update students with random Group
         for student in students:
             student.group_id = random.choice(groups)
             print(student.group_id)
             student.save()
+
+        # Add for Group senior FROM THE GROUP and curator - random teacher
+        for group in groups:
+            while group.senior is None:
+                student = random.choice(students)
+                if student.group_id.id == group.id:
+                    group.senior = student
+                else:
+                    print(f'student {student.group_id} not in group {group.id}')
+            group.curator = random.choice(teachers)
+            group.save()
+            print(group.get_info())
+
+
+

@@ -45,7 +45,7 @@ def group_edit(request, pk):
         if form.is_valid():
             form.save()
             from django.urls import reverse
-            return HttpResponseRedirect(reverse(groups()))
+            return HttpResponseRedirect(reverse('group-list'))
     else:
         form = GroupAddForm(instance=group)
 

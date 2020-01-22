@@ -1,0 +1,100 @@
+INFO:root:2020-01-22 20:48:03.124503+00:00: /groups/list/ GET
+INFO:root:2020-01-22 20:48:03.150319+00:00: 200 in 0:00:00.025816 ms
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:root:2020-01-22 20:51:35.931079+00:00: /groups/edit/1/ GET returned status code: 200 in 0:00:00.039686 ms
+ERROR:django.request:Internal Server Error: /groups/edit/1/
+Traceback (most recent call last):
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/src/groups/views.py", line 48, in group_edit
+    return HttpResponseRedirect(reverse(groups()))
+TypeError: groups() missing 1 required positional argument: 'request'
+INFO:root:2020-01-22 20:51:40.649744+00:00: /groups/edit/1/ POST returned status code: 500 in 0:00:00.036879 ms
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/groups/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /groups/edit/1/
+Traceback (most recent call last):
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/src/groups/views.py", line 48, in group_edit
+    return HttpResponseRedirect(reverse('groups'))
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'groups' not found. 'groups' is not a valid view function or pattern name.
+INFO:root:2020-01-22 20:53:39.412796+00:00: /groups/edit/1/ POST returned status code: 500 in 0:00:00.049489 ms
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/groups/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /groups/edit/1/
+Traceback (most recent call last):
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/src/groups/views.py", line 48, in group_edit
+    return HttpResponseRedirect(reverse('groups-list'))
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'groups-list' not found. 'groups-list' is not a valid view function or pattern name.
+INFO:root:2020-01-22 20:53:54.585459+00:00: /groups/edit/1/ POST returned status code: 500 in 0:00:00.046505 ms
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/groups/views.py changed, reloading.
+INFO:root:2020-01-22 20:54:03.359837+00:00: /groups/edit/1/ POST returned status code: 302 in 0:00:00.011472 ms
+INFO:root:2020-01-22 20:54:03.398007+00:00: /groups/list/ GET returned status code: 200 in 0:00:00.021410 ms
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:root:2020-01-22 20:57:33.625875+00:00: /groups/delete/3/ GET returned status code: 302 in ['.'] ms
+INFO:root:2020-01-22 20:57:33.662603+00:00: /groups/list/ GET returned status code: 200 in ['.'] ms
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:root:2020-01-22 20:58:35.673983+00:00: /groups/list/ GET returned status code: 200 in . ms
+INFO:root:2020-01-22 20:58:58.716430+00:00: /groups/list/ GET returned status code: 200 in . ms
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:root:2020-01-22 20:59:00.702867+00:00: /groups/edit/4/ GET returned status code: 200 in . ms
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:root:2020-01-22 21:00:19.462230+00:00: /groups/edit/4/ POST returned status code: 302 in 012460 ms
+INFO:root:2020-01-22 21:00:19.500674+00:00: /groups/list/ GET returned status code: 200 in 023357 ms
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students_tracker/middleware.py changed, reloading.
+INFO:root:2020-01-22 21:19:59.039868+00:00: / GET returned status code: 404 in 005054 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-22 21:20:03.869943+00:00: /students/list/ GET returned status code: 200 in 029362 microseconds
+INFO:root:2020-01-22 21:20:08.135688+00:00: /group/list/ GET returned status code: 404 in 002254 microseconds
+WARNING:django.request:Not Found: /group/list/
+INFO:root:2020-01-22 21:20:10.451930+00:00: /groups/list/ GET returned status code: 200 in 018617 microseconds
+INFO:root:2020-01-22 21:21:23.347559+00:00: /groups/edit/24/ GET returned status code: 200 in 033093 microseconds
+INFO:root:2020-01-22 21:21:31.850844+00:00: /groups/edit/24/ GET returned status code: 200 in 040261 microseconds
+INFO:root:2020-01-22 21:21:38.279430+00:00: /groups/edit/24/ POST returned status code: 302 in 005626 microseconds
+INFO:root:2020-01-22 21:21:38.314653+00:00: /groups/list/ GET returned status code: 200 in 015834 microseconds
+INFO:root:2020-01-22 21:24:02.278849+00:00: /students/list/ GET returned status code: 200 in 023791 microseconds
+INFO:root:2020-01-22 21:24:50.131119+00:00: /students/edit/213/ GET returned status code: 200 in 021475 microseconds
+INFO:root:2020-01-22 21:24:57.345767+00:00: /students/edit/213/ POST returned status code: 302 in 010627 microseconds
+INFO:root:2020-01-22 21:24:57.385867+00:00: /students/list/ GET returned status code: 200 in 023122 microseconds
+INFO:root:2020-01-22 21:25:01.149852+00:00: /students/delete/201/ GET returned status code: 302 in 005260 microseconds
+INFO:root:2020-01-22 21:25:01.181441+00:00: /students/list/ GET returned status code: 200 in 019686 microseconds
+INFO:root:2020-01-22 21:25:01.587490+00:00: /students/delete/202/ GET returned status code: 302 in 005766 microseconds
+INFO:root:2020-01-22 21:25:01.622444+00:00: /students/list/ GET returned status code: 200 in 018926 microseconds
+INFO:root:2020-01-22 21:25:02.014320+00:00: /students/delete/203/ GET returned status code: 302 in 005521 microseconds
+INFO:root:2020-01-22 21:25:02.043748+00:00: /students/list/ GET returned status code: 200 in 019485 microseconds
+INFO:root:2020-01-22 21:25:02.297634+00:00: /students/delete/204/ GET returned status code: 302 in 005223 microseconds
+INFO:root:2020-01-22 21:25:02.326689+00:00: /students/list/ GET returned status code: 200 in 018896 microseconds
+INFO:root:2020-01-22 21:25:10.218614+00:00: /teacher/list/ GET returned status code: 404 in 002279 microseconds
+WARNING:django.request:Not Found: /teacher/list/
+INFO:root:2020-01-22 21:25:14.523134+00:00: /teachers/list/ GET returned status code: 200 in 003920 microseconds
+INFO:root:2020-01-22 21:28:28.187664+00:00: / GET returned status code: 404 in 004116 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-22 21:28:52.828835+00:00: /students GET returned status code: 404 in 002583 microseconds
+WARNING:django.request:Not Found: /students
+INFO:root:2020-01-22 21:28:57.307386+00:00: /students/list/ GET returned status code: 200 in 027308 microseconds
