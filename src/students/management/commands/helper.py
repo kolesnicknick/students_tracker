@@ -48,6 +48,3 @@ class Command(BaseCommand):
             group.curator = random.choice(teachers)
             group.save()
             print(group.get_info())
-
-
-
