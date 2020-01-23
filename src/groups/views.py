@@ -6,8 +6,14 @@ from groups.models import Group
 
 
 def groups(request):
-    qset = Group.objects.all()
-    return render(request, 'group_list.html', context={'group_list': qset})
+    queryset = Group.objects.all()
+    fn = request.GET.get('q')
+    if fn:
+        q1 = queryset.filter(group_name__istartswith=fn)
+        q2 = queryset.filter(senior__first_name__istartswith=fn)
+        q3 = queryset.filter(curator__first_name__istartswith=fn)
+        queryset = q1.union(q2).union(q3)
+    return render(request, 'group_list.html', context={'group_list': queryset})
 
 
 def generate_group(request):

@@ -2,7 +2,12 @@
 {% block title %}LIST OF STUDENTOTA{% endblock %}
 
 {% block content %}
-<form action="/students/list/" method="get">
+
+<form action="{% url 'students-add' %}" method="get">
+    <button class="btn btn-primary" type="submit">Add Student</button>
+</form>
+
+<form action="{% url 'students-list' %}" method="get">
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">@</span>

@@ -2,12 +2,17 @@
 {% block title %}List of Teachers{% endblock %}
 
 {% block content %}
-<form action="/teachers/list/" method="get">
+
+<form action="{% url 'teachers-add' %}" method="get">
+    <button class="btn btn-primary" type="submit">Add Teacher</button>
+</form>
+
+<form action="{% url 'teachers-list' %}" method="get">
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">@</span>
         </div>
-        <input aria-describedby="basic-addon1" aria-label="Teacher Name" class="form-control" name="first_name"
+        <input aria-describedby="basic-addon1" aria-label="Teacher Name" class="form-control" name="q"
                placeholder="Username" type="text">
     </div>
     <button class="btn btn-success" type="submit">Search</button>

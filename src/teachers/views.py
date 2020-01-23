@@ -7,6 +7,12 @@ from teachers.models import Teacher
 
 def teachers(request):
     queryset = Teacher.objects.all()
+    fn = request.GET.get('q')
+    if fn:
+        q1 = queryset.filter(first_name__istartswith=fn)
+        q2 = queryset.filter(last_name__istartswith=fn)
+        q3 = queryset.filter(emails__istartswith=fn)
+        queryset = q1.union(q2).union(q3)
     return render(request, 'teacher_list.html', context={'teacher_list': queryset})
 
 
