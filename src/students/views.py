@@ -1,3 +1,5 @@
+import logging
+
 from django.http import HttpResponseRedirect, HttpResponseNotFound, HttpResponse
 from django.shortcuts import render
 from django.urls import reverse
@@ -68,6 +70,8 @@ def email(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
+            logging.info(f"USER CONTACTED WITH MAIL: {form.cleaned_data['email']} "
+                         f"AND SUBJECT: {form.cleaned_data['subject']}")
             form.save()
             return HttpResponseRedirect(reverse('students-list'))
     else:

@@ -12,7 +12,7 @@ class MiddleWareFileLogger:
 
     def __call__(self, request):
         start = datetime.now(timezone.utc)
-        request_info = f'{start}: {request.path} {request.method}'
+        request_info = f'{start}: {request.path} {request.method} {request.body}'
         response = self.get_response(request)
         end = datetime.now(timezone.utc)
         logging.info(
