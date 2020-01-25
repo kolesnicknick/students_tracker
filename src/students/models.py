@@ -10,14 +10,17 @@ class Student(models.Model):
     emails = models.EmailField()
     phone = models.CharField(max_length=16)
     address = models.CharField(max_length=255, null=True, blank=True)
-    group_id = models.ForeignKey('groups.Group',
-                                 models.SET_NULL,
-                                 null=True,
-                                 blank=True)
+    groups = models.ForeignKey('groups.Group',
+                               models.SET_NULL,
+                               null=True,
+                               blank=True)
 
     def get_info(self):
         return f'{self.first_name} | {self.last_name} | {self.birth_date} |' \
                f' {self.emails} | {self.phone} | {self.address}'
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name} {str(self.groups)}'
 
     @classmethod
     def generate_student(cls):

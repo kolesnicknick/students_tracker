@@ -18,6 +18,9 @@ class Group(models.Model):
     def get_info(self):
         return f'{self.group_name}'
 
+    def __str__(self):
+        return self.get_info()
+
     @classmethod
     def gen_group(cls):
         fake = Faker()

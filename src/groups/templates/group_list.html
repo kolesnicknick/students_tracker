@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<form action="{% url 'groups-add' %}" method="get">
+<form action="{% url 'group-add' %}" method="get">
     <button class="btn btn-primary" type="submit">Add Group</button>
 </form>
 
@@ -45,7 +45,6 @@
     </tr>
     {% endfor %}
 </table>
-{# groups_list|safe #}
 
 {% endblock content %}
 

@@ -8,7 +8,7 @@ from students.models import Student
 
 
 def students(request):
-    queryset = Student.objects.all().select_related('group_id')
+    queryset = Student.objects.all().select_related('groups')
     fn = request.GET.get('q')
     if fn:
         q1 = queryset.filter(first_name__istartswith=fn)

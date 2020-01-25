@@ -33,18 +33,18 @@ class Command(BaseCommand):
 
         # Update students with random Group
         for student in students:
-            student.group_id = random.choice(groups)
-            print(student.group_id)
+            student.groups = random.choice(groups)
+            print(student.groups)
             student.save()
 
         # Add for Group senior FROM THE GROUP and curator - random teacher
         for group in groups:
             while group.senior is None:
                 student = random.choice(students)
-                if student.group_id.id == group.id:
+                if student.groups.id == group.id:
                     group.senior = student
                 else:
-                    print(f'student {student.group_id} not in group {group.id}')
+                    print(f'student {student.groups} not in group {group.id}')
             group.curator = random.choice(teachers)
             group.save()
             print(group.get_info())

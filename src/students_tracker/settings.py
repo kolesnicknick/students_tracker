@@ -132,4 +132,9 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'nikodekole@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ['MAIL_PASS']
+EMAIL_HOST_PASSWORD = "h2d2d2h2"
+
+try:
+    from students_tracker.settings_local import *
+except ImportError:
+    print('IMPORT LOCAL VARIABLES FAILED')
