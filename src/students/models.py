@@ -20,7 +20,7 @@ class Student(models.Model):
                f' {self.emails} | {self.phone} | {self.address}'
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name} {str(self.groups)}'
+        return f'{self.first_name} {self.last_name}'
 
     @classmethod
     def generate_student(cls):

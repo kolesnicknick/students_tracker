@@ -23,7 +23,7 @@ class Teacher(models.Model):
         teacher = cls(
             first_name=fake.first_name(),
             last_name=fake.last_name(),
-            degree=random.choice(['A.S.', 'M.S.', 'Ph.D.', 'J.D.', 'M.D.']),
+            degree=random.choice(('A.S.', 'M.S.', 'Ph.D.', 'J.D.', 'M.D.')),
             email=fake.email(),
             phone=fake.phone_number(),
         )

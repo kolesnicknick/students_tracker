@@ -5,25 +5,20 @@ from students.models import Student
 from teachers.models import Teacher
 
 
-# class UserProfileAdmin(.mod)
-
 class StudentAdmin(admin.ModelAdmin):
-    readonly_fields = ('emails', 'phone')
-    last_display = ('id', 'first_name', 'last_name', 'emails', 'group')
-    list_select_related = ['groups']
-
-    def user_info(self, obj):
-        pass
+    readonly_fields = ('emails', 'groups')
+    last_display = ('id', 'first_name', 'last_name', 'groups',)
+    list_select_related = ('groups',)
+    list_per_page = 10
 
     def get_readonly_fields(self, request, obj=None):
         readonly_fields = super().get_readonly_fields(request, obj)
-        if request.user.groups.filter('manager').exist():
-            return readonly_fields + 'emails', 'phone',
+        if request.user.groups.filter(name='manager').exists():
+            return readonly_fields + ('phone',)
         return readonly_fields
 
-
-class TeacherAdmin(admin.ModelAdmin):
-    pass
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 
 class StudentInline(admin.TabularInline):
@@ -34,6 +29,10 @@ class GroupAdmin(admin.ModelAdmin):
     inlines = [
         StudentInline
     ]
+
+
+class TeacherAdmin(admin.ModelAdmin):
+    pass
 
 
 admin.site.register(Student, StudentAdmin)

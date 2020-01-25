@@ -19,7 +19,7 @@ class Group(models.Model):
         return f'{self.group_name}'
 
     def __str__(self):
-        return self.get_info()
+        return f'{self.group_name}'
 
     @classmethod
     def gen_group(cls):
