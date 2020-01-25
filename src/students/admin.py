@@ -39,5 +39,3 @@ class GroupAdmin(admin.ModelAdmin):
 admin.site.register(Student, StudentAdmin)
 admin.site.register(Teacher, TeacherAdmin)
 admin.site.register(Group, GroupAdmin)
-
-admin.site.site_header = 'Student App ADMINKAAA'

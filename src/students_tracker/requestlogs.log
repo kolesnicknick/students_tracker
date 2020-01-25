@@ -1839,3 +1839,4 @@ INFO:root:2020-01-25 12:56:07.494458+00:00: /teachers/list/ GET b'' returned sta
 INFO:root:2020-01-25 12:56:26.433100+00:00: /teachers/list/ GET b'' returned status code: 200 in 004705 microseconds
 INFO:root:2020-01-25 12:56:28.552616+00:00: /teachers/edit/61/ GET b'' returned status code: 200 in 022179 microseconds
 INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/migrations/0004_auto_20200125_1017.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/admin.py changed, reloading.
