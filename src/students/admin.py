@@ -26,13 +26,20 @@ class StudentInline(admin.TabularInline):
 
 
 class GroupAdmin(admin.ModelAdmin):
+    readonly_fields = ('group_name',)
+    list_display = ('id', 'group_name', 'senior', 'curator')
+    list_select_related = ('senior',)
+    list_per_page = 10
+
     inlines = [
         StudentInline
     ]
 
 
 class TeacherAdmin(admin.ModelAdmin):
-    pass
+    readonly_fields = ('email', 'phone')
+    list_display = ('id', 'degree', 'first_name', 'last_name', 'email', 'phone')
+    list_per_page = 10
 
 
 admin.site.register(Student, StudentAdmin)
