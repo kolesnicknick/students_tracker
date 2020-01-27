@@ -5,23 +5,34 @@ from django.forms import ModelForm, Form, EmailField, CharField, ValidationError
 from .models import Student
 
 
-class StudentsAddForm(ModelForm):
+class StudentsBase(ModelForm):
+    def clean_emails(self):
+        email = self.cleaned_data['emails'].lower()
+        # filter(email=email) -> filter(email__exact=email)
+        emails_exists = Student.objects \
+            .filter(emails__iexact=email)
+        try:
+            emails_exists = emails_exists.exclude(id=self.instance.id)
+        except Exception:
+            print('no student found')
+
+        print(emails_exists.query)
+        if emails_exists.exists():
+            raise ValidationError(f'{email} is already used!')
+        return email
+
+
+class StudentsAddForm(StudentsBase):
     class Meta:
         model = Student
         fields = '__all__'
 
 
-class StudentsAdminForm(ModelForm):
+class StudentsAdminForm(StudentsBase):
     class Meta:
         model = Student
         fields = '__all__'
         exclude = ['id']
-
-    def clean_emails(self):
-        email = self.cleaned_data['emails'].lower()
-        if Student.objects.filter(emails__iexact=email).exists():
-            raise ValidationError(f'Email {email} is already used')
-        return email
 
 
 class ContactForm(Form):

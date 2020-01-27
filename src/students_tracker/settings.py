@@ -132,7 +132,7 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'nikodekole@gmail.com'
-EMAIL_HOST_PASSWORD = "h2d2d2h2"
+EMAIL_HOST_PASSWORD = ""
 
 try:
     from students_tracker.settings_local import *

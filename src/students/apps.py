@@ -5,4 +5,4 @@ class StudentsConfig(AppConfig):
     name = 'students'
 
     def ready(self):
-        pass
+        from students.signals import pre_save_student

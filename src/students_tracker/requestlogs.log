@@ -4260,3 +4260,99 @@ INFO:root:2020-01-26 09:38:08.574868+00:00: /admin/jsi18n/ GET b'' returned stat
 INFO:root:2020-01-26 09:38:09.470278+00:00: /admin/teachers/teacher/73/change/ GET b'' returned status code: 200 in 026858 microseconds
 INFO:root:2020-01-26 09:38:09.554160+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 005241 microseconds
 INFO:root:2020-01-26 09:38:12.115066+00:00: /admin/teachers/teacher/ GET b'' returned status code: 200 in 041146 microseconds
+INFO:root:2020-01-27 19:59:45.463940+00:00: / GET b'' returned status code: 404 in 008445 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-27 19:59:55.546569+00:00: /students/add/ GET b'' returned status code: 200 in 048021 microseconds
+INFO:root:2020-01-27 20:00:04.516783+00:00: /teachers/add/ POST b'csrfmiddlewaretoken=OPmYUPlTe6VuSe7Vsh9GDOx3Hdmq85eMYp0D8GeIeXWAC8JOR3ii7p4zW4sgF1G6&first_name=schroeder&last_name=%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA&birth_date=15%2F06%2F1992&emails=davidpatterson%40armstrong.net&phone=%2B380997859700&address=Zap+shosse+19&groups=65&submit=' returned status code: 200 in 017327 microseconds
+INFO:root:2020-01-27 20:01:46.016044+00:00: /students/add/ GET b'' returned status code: 200 in 020823 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/views.py changed, reloading.
+INFO:root:2020-01-27 20:02:11.202373+00:00: /students/add/ GET b'' returned status code: 200 in 064002 microseconds
+ERROR:django.request:Internal Server Error: /students/add/
+Traceback (most recent call last):
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/src/students/views.py", line 31, in students_add
+    if form.is_valid():
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 381, in full_clean
+    self._clean_fields()
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 402, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "/Users/niko/IdeaProjects/hillel-python/src/students/forms.py", line 12, in clean_emails
+    emails_exists = Student.objects \
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'email' into field. Choices are: address, birth_date, emails, first_name, group, groups, groups_id, id, last_name, phone
+INFO:root:2020-01-27 20:02:19.398858+00:00: /students/add/ POST b'csrfmiddlewaretoken=tvFHH4W1gTfNeYPKc4efAINoNkdCDnX0D5jmVVPQgKgTYSrDBQnR4jkU2bjsajpk&first_name=%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9&last_name=%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA&birth_date=15%2F06%2F1992&emails=davidpatterson%40armstrong.net&phone=%2B380997859700&address=Zap+shosse+19&groups=65&submit=' returned status code: 500 in 067026 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/forms.py changed, reloading.
+ERROR:django.request:Internal Server Error: /students/add/
+Traceback (most recent call last):
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/src/students/views.py", line 31, in students_add
+    if form.is_valid():
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 381, in full_clean
+    self._clean_fields()
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 402, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "/Users/niko/IdeaProjects/hillel-python/src/students/forms.py", line 13, in clean_emails
+    .filter(emails__iexact=emai)
+NameError: name 'emai' is not defined
+INFO:root:2020-01-27 20:03:07.373145+00:00: /students/add/ POST b'csrfmiddlewaretoken=tvFHH4W1gTfNeYPKc4efAINoNkdCDnX0D5jmVVPQgKgTYSrDBQnR4jkU2bjsajpk&first_name=%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9&last_name=%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA&birth_date=15%2F06%2F1992&emails=davidpatterson%40armstrong.net&phone=%2B380997859700&address=Zap+shosse+19&groups=65&submit=' returned status code: 500 in 047597 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/forms.py changed, reloading.
+INFO:root:2020-01-27 20:03:26.169937+00:00: /students/add/ POST b'csrfmiddlewaretoken=tvFHH4W1gTfNeYPKc4efAINoNkdCDnX0D5jmVVPQgKgTYSrDBQnR4jkU2bjsajpk&first_name=%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9&last_name=%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA&birth_date=15%2F06%2F1992&emails=davidpatterson%40armstrong.net&phone=%2B380997859700&address=Zap+shosse+19&groups=65&submit=' returned status code: 200 in 044662 microseconds
+INFO:root:2020-01-27 20:03:32.444210+00:00: /students/add/ GET b'' returned status code: 200 in 023265 microseconds
+INFO:root:2020-01-27 20:03:36.620441+00:00: /students/list/ GET b'' returned status code: 200 in 021960 microseconds
+INFO:root:2020-01-27 20:03:45.322322+00:00: /students/edit/1001/ GET b'' returned status code: 200 in 023617 microseconds
+INFO:root:2020-01-27 20:03:49.876653+00:00: /students/edit/1001/ POST b'csrfmiddlewaretoken=LAu1d7yTCMQpyLqgZNp8qkK0siYlimNIVa8GrYrICDRviF29ozyKUVhwH94bPif2&first_name=Andrew&last_name=Pierce&birth_date=1977-11-20&emails=adam85%40yahoo.com&phone=001-741-169-2518x817&address=6444+Thompson+StreetShaunborough%2C+RI+44019&groups=69&submit=' returned status code: 200 in 023780 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/forms.py changed, reloading.
+INFO:root:2020-01-27 20:05:06.776220+00:00: /students/edit/1001/ GET b'' returned status code: 200 in 036285 microseconds
+INFO:root:2020-01-27 20:05:10.578174+00:00: /students/edit/1001/ POST b'csrfmiddlewaretoken=ouOyxLbcdCMvH34CRyo2JH3jsXoCie3fy4sdLC41dtNBrXGvgkxEdiAPHOusPavz&first_name=Andrew&last_name=Pierce&birth_date=1977-11-20&emails=adam85%40yahoo.com&phone=001-741-169-2518x817&address=6444+Thompson+StreetShaunborough%2C+RI+44019&groups=68&submit=' returned status code: 200 in 028913 microseconds
+INFO:root:2020-01-27 20:05:30.211092+00:00: /admin/ GET b'' returned status code: 200 in 027659 microseconds
+INFO:root:2020-01-27 20:05:54.353455+00:00: /admin/students/student/ GET b'' returned status code: 200 in 027626 microseconds
+INFO:root:2020-01-27 20:05:58.262169+00:00: /admin/students/student/1092/change/ GET b'' returned status code: 200 in 046754 microseconds
+INFO:root:2020-01-27 20:05:58.378587+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 009189 microseconds
+INFO:root:2020-01-27 20:06:03.911469+00:00: /admin/students/student/1092/change/ POST b'csrfmiddlewaretoken=kc6qzECy1zrByjZeg9GtnvacsdzDymR8uMK5Nvvn1qsHidB7FVP5R6HIH4Ft5ijs&first_name=Joseph&last_name=Gray&birth_date=1976-10-13&emails=cgilbert%40neal-baldwin.com&phone=001-028-896-4043x93456&address=02914+Rachel+MountainsWest+Cathyport%2C+MT+28147&groups=70&_save=Save' returned status code: 200 in 042409 microseconds
+INFO:root:2020-01-27 20:06:04.014506+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 004159 microseconds
+INFO:root:2020-01-27 20:52:33.758113+00:00: /admin/students/student/1092/history/ GET b'' returned status code: 200 in 016532 microseconds
+INFO:root:2020-01-27 20:52:39.001953+00:00: /admin/students/student/1092/change/ GET b'' returned status code: 200 in 046492 microseconds
+INFO:root:2020-01-27 21:40:57.000712+00:00: / GET b'' returned status code: 404 in 009991 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-27 21:41:00.585409+00:00: /students/list/ GET b'' returned status code: 200 in 035253 microseconds
+INFO:root:2020-01-27 21:41:04.721414+00:00: /students/edit/1201/ GET b'' returned status code: 200 in 037273 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/__init__.py changed, reloading.
+INFO:root:2020-01-27 21:51:08.469320+00:00: / GET b'' returned status code: 404 in 007981 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-27 21:51:26.856843+00:00: / GET b'' returned status code: 404 in 007901 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-27 21:51:30.790805+00:00: /students/list/ GET b'' returned status code: 200 in 033784 microseconds
+INFO:root:2020-01-27 21:51:33.157132+00:00: /students/edit/1301/ GET b'' returned status code: 200 in 036980 microseconds
