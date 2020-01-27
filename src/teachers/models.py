@@ -8,7 +8,7 @@ class Teacher(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     email = models.EmailField()
-    degree = models.CharField(max_length=20, null=True, blank=True)
+    degree = models.PositiveSmallIntegerField()
     phone = models.CharField(max_length=16)
 
     def get_info(self):
