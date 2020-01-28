@@ -8,7 +8,6 @@ from .models import Student
 class StudentsBase(ModelForm):
     def clean_emails(self):
         email = self.cleaned_data['emails'].lower()
-        # filter(email=email) -> filter(email__exact=email)
         emails_exists = Student.objects \
             .filter(emails__iexact=email)
         try:
@@ -20,6 +19,18 @@ class StudentsBase(ModelForm):
         if emails_exists.exists():
             raise ValidationError(f'{email} is already used!')
         return email
+
+    def clean_phone(self):
+        phone = self.cleaned_data['phone']
+
+        phone_exists = Student.objects \
+            .filter(phone__iexact=phone)
+        try:
+            phone_exists = phone_exists.exclude(id=self.instance.id)
+        except Exception:
+            print('no student found')
+
+        return phone
 
 
 class StudentsAddForm(StudentsBase):

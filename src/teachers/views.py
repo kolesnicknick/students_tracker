@@ -29,7 +29,7 @@ def teacher_add(request):
         if form.is_valid():
             form.save()
             from django.urls import reverse
-            return HttpResponseRedirect(reverse('teachers'))
+            return HttpResponseRedirect(reverse('teachers-list'))
     else:
         form = TeacherAddForm()
 
@@ -51,7 +51,7 @@ def teachers_edit(request, pk):
         if form.is_valid():
             form.save()
             from django.urls import reverse
-            return HttpResponseRedirect(reverse('teachers'))
+            return HttpResponseRedirect(reverse('teachers-list'))
     else:
         form = TeacherAddForm(instance=teacher)
 

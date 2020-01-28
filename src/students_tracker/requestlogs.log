@@ -4356,3 +4356,58 @@ INFO:root:2020-01-27 21:51:26.856843+00:00: / GET b'' returned status code: 404 
 WARNING:django.request:Not Found: /
 INFO:root:2020-01-27 21:51:30.790805+00:00: /students/list/ GET b'' returned status code: 200 in 033784 microseconds
 INFO:root:2020-01-27 21:51:33.157132+00:00: /students/edit/1301/ GET b'' returned status code: 200 in 036980 microseconds
+INFO:root:2020-01-28 23:16:12.922050+00:00: / GET b'' returned status code: 404 in 007562 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-28 23:16:16.923826+00:00: /students/list/ GET b'' returned status code: 200 in 033838 microseconds
+INFO:root:2020-01-28 23:16:21.170334+00:00: /students/edit/1301/ GET b'' returned status code: 200 in 036485 microseconds
+INFO:root:2020-01-28 23:16:24.107452+00:00: /students/edit/1301/ POST b'csrfmiddlewaretoken=v0RwEahAE2BQFLItVfX8XPHl1DmhIlV1FAvbS1apETCWpFkmk16KrqeRgus7fhnl&first_name=Megan&last_name=Mcconnell&birth_date=1972-07-11&emails=patelmichael%40clark-dunn.biz&phone=167314147660334&address=926+Sherry+Lake+Apt.+557South+Stephanie%2C+SC+07416&groups=87&submit=' returned status code: 302 in 016783 microseconds
+INFO:root:2020-01-28 23:16:24.153175+00:00: /students/list/ GET b'' returned status code: 200 in 022424 microseconds
+INFO:root:2020-01-28 23:16:26.044275+00:00: /students/edit/1301/ GET b'' returned status code: 200 in 022264 microseconds
+INFO:root:2020-01-28 23:16:36.113114+00:00: /students/edit/1301/ POST b'csrfmiddlewaretoken=k8ggBrFHMKJDUKlb5BnEz0PHi54wVI5UuIUVPiywMBKJEEX4unwg3BmdxWamsExe&first_name=Megan&last_name=Mcconnell&birth_date=1972-07-11&emails=patelmichael%40clark-dunn.biz&phone=16731414x766sad&address=926+Sherry+Lake+Apt.+557South+Stephanie%2C+SC+07416&groups=87&submit=' returned status code: 302 in 006845 microseconds
+INFO:root:2020-01-28 23:16:36.149541+00:00: /students/list/ GET b'' returned status code: 200 in 024025 microseconds
+INFO:root:2020-01-28 23:16:39.770002+00:00: /students/edit/1301/ GET b'' returned status code: 200 in 021458 microseconds
+INFO:root:2020-01-28 23:17:17.003696+00:00: /students/edit/1301/ POST b'csrfmiddlewaretoken=LGj9Cx4c3ebvFmjlrytLdgzTzASPMXgRVgXOQoX135cBpgVeQkCnHR6pOrYFjTIb&first_name=Megan&last_name=Mcconnell&birth_date=1972-07-11&emails=patelmichael%40clark-dunn.biz&phone=16731414766&address=926+Sherry+Lake+Apt.+557South+Stephanie%2C+SC+07416&groups=87&submit=' returned status code: 302 in 008224 microseconds
+INFO:root:2020-01-28 23:17:17.038497+00:00: /students/list/ GET b'' returned status code: 200 in 020744 microseconds
+INFO:root:2020-01-28 23:17:21.042336+00:00: /students/edit/1306/ GET b'' returned status code: 200 in 023383 microseconds
+INFO:root:2020-01-28 23:17:23.937525+00:00: /students/edit/1306/ POST b'csrfmiddlewaretoken=jBljNlJJ49c5yvGT6ExKkLTGp2FZYzvStbZY1cCy40dbipiMvqGmOmqcETLPvvXc&first_name=Christine&last_name=Griffith&birth_date=2004-03-15&emails=patelmichael%40clark-dunn.biz&phone=3394663597&address=428+Cheryl+Key+Apt.+747Cunninghamborough%2C+MN+27692&groups=91&submit=' returned status code: 200 in 024624 microseconds
+INFO:root:2020-01-28 23:17:29.684453+00:00: /students/edit/1306/ GET b'' returned status code: 200 in 024665 microseconds
+INFO:root:2020-01-28 23:17:33.965165+00:00: /students/edit/1308/ GET b'' returned status code: 200 in 022257 microseconds
+INFO:root:2020-01-28 23:17:37.043774+00:00: /students/edit/1308/ POST b'csrfmiddlewaretoken=ncLkrC4qzcfKdzoCSZMABmiM4Fd094b9xMpZFtXfz3gQXt0vhLVc5XPijwjQG0Dt&first_name=Kelly&last_name=Peters&birth_date=1986-11-03&emails=gordonsherry%40hotmail.com&phone=3394663597&address=638+Carol+StationFernandezchester%2C+DC+71627&groups=87&submit=' returned status code: 200 in 025126 microseconds
+INFO:root:2020-01-28 23:17:42.274597+00:00: /students/edit/1308/ GET b'' returned status code: 200 in 021932 microseconds
+INFO:root:2020-01-28 23:17:48.257439+00:00: /teachers/list/ GET b'' returned status code: 200 in 004448 microseconds
+INFO:root:2020-01-28 23:18:02.346184+00:00: /teachers/edit/94/ GET b'' returned status code: 200 in 022627 microseconds
+INFO:root:2020-01-28 23:18:07.987418+00:00: /teachers/edit/99/ GET b'' returned status code: 200 in 015892 microseconds
+INFO:root:2020-01-28 23:18:10.402019+00:00: /teachers/edit/99/ POST b'csrfmiddlewaretoken=22zkoFnpm6tWgXxwUcDdbzUTYdgojnUPcCdZCwgemXu20R9pjYMPFarpd4meQjm9&first_name=Rodney&last_name=Lewis&email=tracy69%40price-atkinson.biz&degree=M.D.&phone=%28655%29862-8264&submit=' returned status code: 200 in 017365 microseconds
+INFO:root:2020-01-28 23:18:13.921025+00:00: /teachers/edit/99/ GET b'' returned status code: 200 in 015574 microseconds
+INFO:root:2020-01-28 23:18:19.138537+00:00: /teachers/edit/99/ GET b'' returned status code: 200 in 016389 microseconds
+INFO:root:2020-01-28 23:18:23.608541+00:00: /teachers/edit/94/ GET b'' returned status code: 200 in 016177 microseconds
+INFO:root:2020-01-28 23:18:25.607630+00:00: /teachers/edit/94/ POST b'csrfmiddlewaretoken=8YWi2PzMTJuO7Z3VwHRgGSg7N6cYNi8liyAXgGsBTAvURTFOVt0SatND2XiOkeAF&first_name=Michelle&last_name=Kim&email=tracy69%40price-atkinson.biz&degree=M.D.&phone=%28655%29862-8264&submit=' returned status code: 200 in 016942 microseconds
+ERROR:django.request:Internal Server Error: /teachers/edit/94/
+Traceback (most recent call last):
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/src/teachers/views.py", line 54, in teachers_edit
+    return HttpResponseRedirect(reverse('teachers'))
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'teachers' not found. 'teachers' is not a valid view function or pattern name.
+INFO:root:2020-01-28 23:18:33.440628+00:00: /teachers/edit/94/ POST b'csrfmiddlewaretoken=qm04t3fveYq4585VHkkr14VTCiEcU6y7AWEJHU8kePraP2HO66t3vFspR9K2r20r&first_name=Michelle&last_name=Kim&email=tracy69%40price-atkinson.biz&degree=M.D.&phone=%28655%29863-8264&submit=' returned status code: 500 in 039210 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/views.py changed, reloading.
+INFO:root:2020-01-28 23:20:03.039311+00:00: /teachers/edit/94/ POST b'csrfmiddlewaretoken=qm04t3fveYq4585VHkkr14VTCiEcU6y7AWEJHU8kePraP2HO66t3vFspR9K2r20r&first_name=Michelle&last_name=Kim&email=tracy69%40price-atkinson.biz&degree=M.D.&phone=%28655%29863-8264&submit=' returned status code: 302 in 015756 microseconds
+INFO:root:2020-01-28 23:20:03.084831+00:00: /teachers/list/ GET b'' returned status code: 200 in 009852 microseconds
+INFO:root:2020-01-28 23:20:04.684551+00:00: /teachers/edit/92/ GET b'' returned status code: 200 in 029254 microseconds
+INFO:root:2020-01-28 23:20:09.626757+00:00: /teachers/edit/92/ POST b'csrfmiddlewaretoken=BxCqNeg7m9ewtOiDgF7R6LNMhW95mvJ3L7g5159Wm0fCdIUwFrgtAmkiwNfVTrbn&first_name=Craig&last_name=Krause&email=opena%40gmail.com&degree=M.D.&phone=%28312%29803-1525&submit=' returned status code: 302 in 005000 microseconds
+INFO:root:2020-01-28 23:20:09.662180+00:00: /teachers/list/ GET b'' returned status code: 200 in 003974 microseconds
+INFO:root:2020-01-28 23:20:11.579032+00:00: /teachers/edit/92/ GET b'' returned status code: 200 in 016231 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.

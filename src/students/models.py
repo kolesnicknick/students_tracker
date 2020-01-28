@@ -8,7 +8,7 @@ class Student(models.Model):
     last_name = models.CharField(max_length=20)
     birth_date = models.DateField()
     emails = models.EmailField(unique=True)
-    phone = models.CharField(max_length=16)
+    phone = models.CharField(max_length=16, unique=True)
     address = models.CharField(max_length=255, null=True, blank=True)
     groups = models.ForeignKey('groups.Group',
                                models.SET_NULL,
