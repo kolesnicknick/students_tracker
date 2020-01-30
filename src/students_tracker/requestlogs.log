@@ -4411,3 +4411,7 @@ INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers
 INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
 INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
 INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:root:2020-01-29 20:58:55.318659+00:00: /students/list/ GET b'' returned status code: 200 in 019042 microseconds
+INFO:root:2020-01-29 20:59:19.641405+00:00: /students/list/ GET b'' returned status code: 200 in 010933 microseconds
+INFO:root:2020-01-29 21:02:10.410837+00:00: /students/list/ GET b'' returned status code: 200 in 017522 microseconds
+INFO:root:2020-01-29 21:02:50.793876+00:00: /students/list/ GET b'' returned status code: 200 in 009436 microseconds
