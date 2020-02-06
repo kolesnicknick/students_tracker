@@ -3,6 +3,7 @@ from django.core.mail import send_mail
 from django.forms import ModelForm, Form, EmailField, CharField, ValidationError
 
 from .models import Student
+from .tasks import send_mail_async
 
 
 class StudentsBase(ModelForm):
@@ -57,4 +58,4 @@ class ContactForm(Form):
         message = data['text']
         email_from = data['email']
         recipient_list = [settings.EMAIL_HOST_USER]
-        send_mail(subject, message, email_from, recipient_list)
+        send_mail_async.delay(subject, message, email_from, recipient_list)

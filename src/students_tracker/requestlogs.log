@@ -4415,3 +4415,90 @@ INFO:root:2020-01-29 20:58:55.318659+00:00: /students/list/ GET b'' returned sta
 INFO:root:2020-01-29 20:59:19.641405+00:00: /students/list/ GET b'' returned status code: 200 in 010933 microseconds
 INFO:root:2020-01-29 21:02:10.410837+00:00: /students/list/ GET b'' returned status code: 200 in 017522 microseconds
 INFO:root:2020-01-29 21:02:50.793876+00:00: /students/list/ GET b'' returned status code: 200 in 009436 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/forms.py changed, reloading.
+INFO:root:2020-01-30 18:29:36.523953+00:00: / GET b'' returned status code: 404 in 007631 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-30 18:29:43.455316+00:00: /students/list/ GET b'' returned status code: 200 in 036932 microseconds
+INFO:root:2020-01-30 18:29:46.451882+00:00: /students/contact/ GET b'' returned status code: 200 in 025264 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:29:55.244775+00:00: /students/contact/ POST b'csrfmiddlewaretoken=o4cs1RvrIczLf3RuAc7klmdXy7u390G2yEQ7fIogI3ARZXtnZYgWPXKtNYATGW8m&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 099942 microseconds
+INFO:root:2020-01-30 18:34:07.329218+00:00: /students/contact/ GET b'' returned status code: 200 in 010920 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:08.322036+00:00: /students/contact/ POST b'csrfmiddlewaretoken=CQMNYZZTE7B7EHkU69f0Q6F5tRZgK36tMqqscQSIEYCdoBWNvVoCkHcBII56hZyN&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 002388 microseconds
+INFO:root:2020-01-30 18:34:08.356988+00:00: /students/list/ GET b'' returned status code: 200 in 022731 microseconds
+INFO:root:2020-01-30 18:34:12.314020+00:00: /students/list/ GET b'' returned status code: 200 in 019996 microseconds
+INFO:root:2020-01-30 18:34:15.693726+00:00: /students/contact/ GET b'' returned status code: 200 in 010591 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:16.847213+00:00: /students/contact/ POST b'csrfmiddlewaretoken=Wem5DTt6QWSsAYSw0akqm1L0da5BeBkd6O0KRKmVQNTykSuppWt2QCiws1brLxMx&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001736 microseconds
+INFO:root:2020-01-30 18:34:16.892990+00:00: /students/list/ GET b'' returned status code: 200 in 020465 microseconds
+INFO:root:2020-01-30 18:34:17.584297+00:00: /students/contact/ GET b'' returned status code: 200 in 012683 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:18.284279+00:00: /students/contact/ POST b'csrfmiddlewaretoken=nnL7IYiauGtePu8Mp0H5BnTvCIgXofCjxXpMWPbZuxukzoKFOMQH5Yq1RzmNVb4D&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001653 microseconds
+INFO:root:2020-01-30 18:34:18.328567+00:00: /students/list/ GET b'' returned status code: 200 in 021454 microseconds
+INFO:root:2020-01-30 18:34:20.141431+00:00: /students/contact/ GET b'' returned status code: 200 in 011801 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:20.773825+00:00: /students/contact/ POST b'csrfmiddlewaretoken=CP2haqF11j0WmY9DhNmnGEGEvzNLKGKMMpGWohyQ1a126SLwGzvZafdaKqTBhCc6&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 002064 microseconds
+INFO:root:2020-01-30 18:34:20.815733+00:00: /students/list/ GET b'' returned status code: 200 in 020552 microseconds
+INFO:root:2020-01-30 18:34:21.573396+00:00: /students/contact/ GET b'' returned status code: 200 in 010307 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:22.130419+00:00: /students/contact/ POST b'csrfmiddlewaretoken=vSm55RSRS2RDfNIlN25ZV9DH4YVwZtOeFs0KjILGSTSJZHkecOeBpKadjP1mwpgy&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001722 microseconds
+INFO:root:2020-01-30 18:34:22.163529+00:00: /students/list/ GET b'' returned status code: 200 in 042627 microseconds
+INFO:root:2020-01-30 18:34:22.701950+00:00: /students/contact/ GET b'' returned status code: 200 in 011397 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:23.246365+00:00: /students/contact/ POST b'csrfmiddlewaretoken=uhhAYJ04dHisjm2bohLvzRVykNATENYHERVfcATTdyjy3gE4N3U73ss4zEGJbJq1&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001663 microseconds
+INFO:root:2020-01-30 18:34:23.273737+00:00: /students/list/ GET b'' returned status code: 200 in 021000 microseconds
+INFO:root:2020-01-30 18:34:23.787120+00:00: /students/contact/ GET b'' returned status code: 200 in 011216 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:24.264958+00:00: /students/contact/ POST b'csrfmiddlewaretoken=pMLv7onwbI6SMNpdNjiv2AkRdGKTrvK8zmpalfglbz7YwH16c5r7wbRnsxQJYrcs&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001672 microseconds
+INFO:root:2020-01-30 18:34:24.295880+00:00: /students/list/ GET b'' returned status code: 200 in 020306 microseconds
+INFO:root:2020-01-30 18:34:24.853745+00:00: /students/contact/ GET b'' returned status code: 200 in 010648 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:25.390327+00:00: /students/contact/ POST b'csrfmiddlewaretoken=lDXrpGVmpqRM3sveTQkCxL1m7g0sb9BrvdB6DxObphSSNm77iCte1mySm76iI53L&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001942 microseconds
+INFO:root:2020-01-30 18:34:25.420654+00:00: /students/list/ GET b'' returned status code: 200 in 020612 microseconds
+INFO:root:2020-01-30 18:34:26.006722+00:00: /students/contact/ GET b'' returned status code: 200 in 010232 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:26.585036+00:00: /students/contact/ POST b'csrfmiddlewaretoken=LYoXzXSkhKemOQ4UmsrglHNEwMJ0g1DNVy2CNOL9hBfsyKGNLeASPikaLDPQNX57&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001980 microseconds
+INFO:root:2020-01-30 18:34:26.623616+00:00: /students/list/ GET b'' returned status code: 200 in 019603 microseconds
+INFO:root:2020-01-30 18:34:27.131096+00:00: /students/contact/ GET b'' returned status code: 200 in 015573 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:27.643029+00:00: /students/contact/ POST b'csrfmiddlewaretoken=QF6voSIEyziB8Q1WSfCTQWH6iMrRGzMk0fKaCJBtyqjHSKDPh1LvkxeCxDxHdveE&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001750 microseconds
+INFO:root:2020-01-30 18:34:27.673054+00:00: /students/list/ GET b'' returned status code: 200 in 019864 microseconds
+INFO:root:2020-01-30 18:34:28.160835+00:00: /students/contact/ GET b'' returned status code: 200 in 011901 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:28.740463+00:00: /students/contact/ POST b'csrfmiddlewaretoken=FrGlkHWbJvv4cMxdyiPaqJOBfxPu2msVP1k0yyP0JmwaWG96X4YMUkl7uoVkziUf&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 002106 microseconds
+INFO:root:2020-01-30 18:34:28.783848+00:00: /students/list/ GET b'' returned status code: 200 in 021075 microseconds
+INFO:root:2020-01-30 18:34:29.275235+00:00: /students/contact/ GET b'' returned status code: 200 in 010736 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:29.867625+00:00: /students/contact/ POST b'csrfmiddlewaretoken=YZT354Fi2NWsqnlkeIsNCUOf33LIwks48zxIjVy72EXyahXdDuBp6vlLiURy3gUo&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001830 microseconds
+INFO:root:2020-01-30 18:34:29.897790+00:00: /students/list/ GET b'' returned status code: 200 in 019653 microseconds
+INFO:root:2020-01-30 18:34:30.428551+00:00: /students/contact/ GET b'' returned status code: 200 in 015358 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:31.007395+00:00: /students/contact/ POST b'csrfmiddlewaretoken=meJFKuXwn5tRS4McMNFwppGT0Op4ukILwOnkYlQlnWuXCYo5bzO8T0dpfFvU1ga5&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001682 microseconds
+INFO:root:2020-01-30 18:34:31.044309+00:00: /students/list/ GET b'' returned status code: 200 in 020356 microseconds
+INFO:root:2020-01-30 18:36:39.104695+00:00: /students/contact/ GET b'' returned status code: 200 in 010051 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:36:40.085100+00:00: /students/contact/ POST b'csrfmiddlewaretoken=DnC66znKaMGv0LaL6FVEpLKtHzyyEK3XNXgLkqgzaDHBKFMEvr4gTmhZWqEobGvh&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001703 microseconds
+INFO:root:2020-01-30 18:36:40.115805+00:00: /students/list/ GET b'' returned status code: 200 in 021680 microseconds
+INFO:root:2020-01-30 18:36:47.468838+00:00: /students/contact/ GET b'' returned status code: 200 in 010435 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:36:48.267205+00:00: /students/contact/ POST b'csrfmiddlewaretoken=A1RTQ5E5uHYwvhEeWxAiOFLok7r10d9AKBvy4WxUuyZCfbg7ljJUigiUzYxRx9BU&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001682 microseconds
+INFO:root:2020-01-30 18:36:48.307453+00:00: /students/list/ GET b'' returned status code: 200 in 019916 microseconds
+INFO:root:2020-01-30 18:36:49.354679+00:00: /students/contact/ GET b'' returned status code: 200 in 010513 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:36:50.190921+00:00: /students/contact/ POST b'csrfmiddlewaretoken=qPw9By6GTpM3m8K0nxFpMudlx5zc4Q8bApaOPpZvTgN962mTMjO1g5KRMWF2BMAv&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001638 microseconds
+INFO:root:2020-01-30 18:36:50.224216+00:00: /students/list/ GET b'' returned status code: 200 in 020506 microseconds
+INFO:root:USER CONTACTED WITH MAIL: kolesnik@ss.ua AND SUBJECT: subject
+INFO:root:2020-01-30 19:16:08.105381+00:00: /students/contact/ POST b'--BoUnDaRyStRiNg\r\nContent-Disposition: form-data; name="email"\r\n\r\nkolesnik@ss.ua\r\n--BoUnDaRyStRiNg\r\nContent-Disposition: form-data; name="subject"\r\n\r\nsubject\r\n--BoUnDaRyStRiNg\r\nContent-Disposition: form-data; name="text"\r\n\r\ntext\r\n--BoUnDaRyStRiNg--\r\n' returned status code: 302 in 144312 microseconds
+INFO:root:2020-01-30 19:16:08.253375+00:00: /students/list/ GET b'' returned status code: 200 in 006614 microseconds
+INFO:root:2020-01-30 19:16:55.831754+00:00: /students/contact/ GET b'' returned status code: 200 in 024493 microseconds
+INFO:root:2020-01-30 19:16:55.858730+00:00: /students/list/ GET b'' returned status code: 200 in 002204 microseconds
+INFO:root:2020-01-30 19:17:07.672303+00:00: /students/contact/ GET b'' returned status code: 200 in 021218 microseconds
+INFO:root:2020-01-30 19:17:07.695942+00:00: /students/list/ GET b'' returned status code: 200 in 002044 microseconds
+INFO:root:2020-02-06 16:07:18.373716+00:00: / GET b'' returned status code: 404 in 008849 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-02-06 16:07:18.591972+00:00: /favicon.ico GET b'' returned status code: 404 in 002790 microseconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:2020-02-06 16:07:24.154988+00:00: /students/list/ GET b'' returned status code: 200 in 035777 microseconds
+INFO:root:2020-02-06 16:07:26.995354+00:00: /students/list/ GET b'' returned status code: 200 in 022707 microseconds
+INFO:root:2020-02-06 16:07:27.808828+00:00: /students/list/ GET b'' returned status code: 200 in 020442 microseconds
+INFO:root:2020-02-06 16:07:28.353832+00:00: /students/list/ GET b'' returned status code: 200 in 020914 microseconds
