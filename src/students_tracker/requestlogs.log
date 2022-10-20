@@ -4240,3 +4240,23 @@ INFO:root:2020-01-25 20:18:52.623178+00:00: /admin/jsi18n/ GET b'' returned stat
 INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/admin.py changed, reloading.
 INFO:root:2020-01-25 20:19:16.567820+00:00: /admin/students/student/1094/change/ GET b'' returned status code: 200 in 059065 microseconds
 INFO:root:2020-01-25 20:19:16.692212+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 006416 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/admin.py changed, reloading.
+INFO:root:2020-01-26 09:37:42.846530+00:00: / GET b'' returned status code: 404 in 012938 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-26 09:37:46.365672+00:00: /admin/ GET b'' returned status code: 200 in 039116 microseconds
+INFO:root:2020-01-26 09:37:47.998733+00:00: /admin/groups/group/ GET b'' returned status code: 200 in 070356 microseconds
+INFO:root:2020-01-26 09:37:48.142909+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 009529 microseconds
+INFO:root:2020-01-26 09:37:54.224845+00:00: /admin/groups/group/71/change/ GET b'' returned status code: 200 in 326476 microseconds
+INFO:root:2020-01-26 09:37:54.613599+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 005410 microseconds
+INFO:root:2020-01-26 09:37:56.966474+00:00: /admin/groups/group/ GET b'' returned status code: 200 in 046762 microseconds
+INFO:root:2020-01-26 09:37:58.495891+00:00: /admin/ GET b'' returned status code: 200 in 014864 microseconds
+INFO:root:2020-01-26 09:38:03.146929+00:00: /admin/students/student/ GET b'' returned status code: 200 in 021866 microseconds
+INFO:root:2020-01-26 09:38:04.005772+00:00: /admin/students/student/1094/change/ GET b'' returned status code: 200 in 036029 microseconds
+INFO:root:2020-01-26 09:38:04.115006+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 004473 microseconds
+INFO:root:2020-01-26 09:38:05.834102+00:00: /admin/students/student/ GET b'' returned status code: 200 in 023303 microseconds
+INFO:root:2020-01-26 09:38:07.615520+00:00: /admin/ GET b'' returned status code: 200 in 015813 microseconds
+INFO:root:2020-01-26 09:38:08.466338+00:00: /admin/teachers/teacher/ GET b'' returned status code: 200 in 039171 microseconds
+INFO:root:2020-01-26 09:38:08.574868+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 005801 microseconds
+INFO:root:2020-01-26 09:38:09.470278+00:00: /admin/teachers/teacher/73/change/ GET b'' returned status code: 200 in 026858 microseconds
+INFO:root:2020-01-26 09:38:09.554160+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 005241 microseconds
+INFO:root:2020-01-26 09:38:12.115066+00:00: /admin/teachers/teacher/ GET b'' returned status code: 200 in 041146 microseconds
