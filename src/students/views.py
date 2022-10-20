@@ -36,7 +36,7 @@ def students_add(request):
         form = StudentsAddForm()
 
     return render(request,
-                  'teacher_add.html',
+                  'student_add.html',
                   context={'form': form})
 
 

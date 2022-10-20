@@ -7,8 +7,8 @@ class Student(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     birth_date = models.DateField()
-    emails = models.EmailField()
-    phone = models.CharField(max_length=16)
+    emails = models.EmailField(unique=True)
+    phone = models.CharField(max_length=16, unique=True)
     address = models.CharField(max_length=255, null=True, blank=True)
     groups = models.ForeignKey('groups.Group',
                                models.SET_NULL,
@@ -21,6 +21,9 @@ class Student(models.Model):
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
 
     @classmethod
     def generate_student(cls):

@@ -4260,3 +4260,245 @@ INFO:root:2020-01-26 09:38:08.574868+00:00: /admin/jsi18n/ GET b'' returned stat
 INFO:root:2020-01-26 09:38:09.470278+00:00: /admin/teachers/teacher/73/change/ GET b'' returned status code: 200 in 026858 microseconds
 INFO:root:2020-01-26 09:38:09.554160+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 005241 microseconds
 INFO:root:2020-01-26 09:38:12.115066+00:00: /admin/teachers/teacher/ GET b'' returned status code: 200 in 041146 microseconds
+INFO:root:2020-01-27 19:59:45.463940+00:00: / GET b'' returned status code: 404 in 008445 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-27 19:59:55.546569+00:00: /students/add/ GET b'' returned status code: 200 in 048021 microseconds
+INFO:root:2020-01-27 20:00:04.516783+00:00: /teachers/add/ POST b'csrfmiddlewaretoken=OPmYUPlTe6VuSe7Vsh9GDOx3Hdmq85eMYp0D8GeIeXWAC8JOR3ii7p4zW4sgF1G6&first_name=schroeder&last_name=%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA&birth_date=15%2F06%2F1992&emails=davidpatterson%40armstrong.net&phone=%2B380997859700&address=Zap+shosse+19&groups=65&submit=' returned status code: 200 in 017327 microseconds
+INFO:root:2020-01-27 20:01:46.016044+00:00: /students/add/ GET b'' returned status code: 200 in 020823 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/views.py changed, reloading.
+INFO:root:2020-01-27 20:02:11.202373+00:00: /students/add/ GET b'' returned status code: 200 in 064002 microseconds
+ERROR:django.request:Internal Server Error: /students/add/
+Traceback (most recent call last):
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/src/students/views.py", line 31, in students_add
+    if form.is_valid():
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 381, in full_clean
+    self._clean_fields()
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 402, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "/Users/niko/IdeaProjects/hillel-python/src/students/forms.py", line 12, in clean_emails
+    emails_exists = Student.objects \
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/query.py", line 892, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/query.py", line 910, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1290, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1315, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1190, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1049, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1419, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'email' into field. Choices are: address, birth_date, emails, first_name, group, groups, groups_id, id, last_name, phone
+INFO:root:2020-01-27 20:02:19.398858+00:00: /students/add/ POST b'csrfmiddlewaretoken=tvFHH4W1gTfNeYPKc4efAINoNkdCDnX0D5jmVVPQgKgTYSrDBQnR4jkU2bjsajpk&first_name=%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9&last_name=%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA&birth_date=15%2F06%2F1992&emails=davidpatterson%40armstrong.net&phone=%2B380997859700&address=Zap+shosse+19&groups=65&submit=' returned status code: 500 in 067026 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/forms.py changed, reloading.
+ERROR:django.request:Internal Server Error: /students/add/
+Traceback (most recent call last):
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/src/students/views.py", line 31, in students_add
+    if form.is_valid():
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 185, in is_valid
+    return self.is_bound and not self.errors
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 180, in errors
+    self.full_clean()
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 381, in full_clean
+    self._clean_fields()
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/forms/forms.py", line 402, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "/Users/niko/IdeaProjects/hillel-python/src/students/forms.py", line 13, in clean_emails
+    .filter(emails__iexact=emai)
+NameError: name 'emai' is not defined
+INFO:root:2020-01-27 20:03:07.373145+00:00: /students/add/ POST b'csrfmiddlewaretoken=tvFHH4W1gTfNeYPKc4efAINoNkdCDnX0D5jmVVPQgKgTYSrDBQnR4jkU2bjsajpk&first_name=%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9&last_name=%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA&birth_date=15%2F06%2F1992&emails=davidpatterson%40armstrong.net&phone=%2B380997859700&address=Zap+shosse+19&groups=65&submit=' returned status code: 500 in 047597 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/forms.py changed, reloading.
+INFO:root:2020-01-27 20:03:26.169937+00:00: /students/add/ POST b'csrfmiddlewaretoken=tvFHH4W1gTfNeYPKc4efAINoNkdCDnX0D5jmVVPQgKgTYSrDBQnR4jkU2bjsajpk&first_name=%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9&last_name=%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA&birth_date=15%2F06%2F1992&emails=davidpatterson%40armstrong.net&phone=%2B380997859700&address=Zap+shosse+19&groups=65&submit=' returned status code: 200 in 044662 microseconds
+INFO:root:2020-01-27 20:03:32.444210+00:00: /students/add/ GET b'' returned status code: 200 in 023265 microseconds
+INFO:root:2020-01-27 20:03:36.620441+00:00: /students/list/ GET b'' returned status code: 200 in 021960 microseconds
+INFO:root:2020-01-27 20:03:45.322322+00:00: /students/edit/1001/ GET b'' returned status code: 200 in 023617 microseconds
+INFO:root:2020-01-27 20:03:49.876653+00:00: /students/edit/1001/ POST b'csrfmiddlewaretoken=LAu1d7yTCMQpyLqgZNp8qkK0siYlimNIVa8GrYrICDRviF29ozyKUVhwH94bPif2&first_name=Andrew&last_name=Pierce&birth_date=1977-11-20&emails=adam85%40yahoo.com&phone=001-741-169-2518x817&address=6444+Thompson+StreetShaunborough%2C+RI+44019&groups=69&submit=' returned status code: 200 in 023780 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/forms.py changed, reloading.
+INFO:root:2020-01-27 20:05:06.776220+00:00: /students/edit/1001/ GET b'' returned status code: 200 in 036285 microseconds
+INFO:root:2020-01-27 20:05:10.578174+00:00: /students/edit/1001/ POST b'csrfmiddlewaretoken=ouOyxLbcdCMvH34CRyo2JH3jsXoCie3fy4sdLC41dtNBrXGvgkxEdiAPHOusPavz&first_name=Andrew&last_name=Pierce&birth_date=1977-11-20&emails=adam85%40yahoo.com&phone=001-741-169-2518x817&address=6444+Thompson+StreetShaunborough%2C+RI+44019&groups=68&submit=' returned status code: 200 in 028913 microseconds
+INFO:root:2020-01-27 20:05:30.211092+00:00: /admin/ GET b'' returned status code: 200 in 027659 microseconds
+INFO:root:2020-01-27 20:05:54.353455+00:00: /admin/students/student/ GET b'' returned status code: 200 in 027626 microseconds
+INFO:root:2020-01-27 20:05:58.262169+00:00: /admin/students/student/1092/change/ GET b'' returned status code: 200 in 046754 microseconds
+INFO:root:2020-01-27 20:05:58.378587+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 009189 microseconds
+INFO:root:2020-01-27 20:06:03.911469+00:00: /admin/students/student/1092/change/ POST b'csrfmiddlewaretoken=kc6qzECy1zrByjZeg9GtnvacsdzDymR8uMK5Nvvn1qsHidB7FVP5R6HIH4Ft5ijs&first_name=Joseph&last_name=Gray&birth_date=1976-10-13&emails=cgilbert%40neal-baldwin.com&phone=001-028-896-4043x93456&address=02914+Rachel+MountainsWest+Cathyport%2C+MT+28147&groups=70&_save=Save' returned status code: 200 in 042409 microseconds
+INFO:root:2020-01-27 20:06:04.014506+00:00: /admin/jsi18n/ GET b'' returned status code: 200 in 004159 microseconds
+INFO:root:2020-01-27 20:52:33.758113+00:00: /admin/students/student/1092/history/ GET b'' returned status code: 200 in 016532 microseconds
+INFO:root:2020-01-27 20:52:39.001953+00:00: /admin/students/student/1092/change/ GET b'' returned status code: 200 in 046492 microseconds
+INFO:root:2020-01-27 21:40:57.000712+00:00: / GET b'' returned status code: 404 in 009991 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-27 21:41:00.585409+00:00: /students/list/ GET b'' returned status code: 200 in 035253 microseconds
+INFO:root:2020-01-27 21:41:04.721414+00:00: /students/edit/1201/ GET b'' returned status code: 200 in 037273 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/__init__.py changed, reloading.
+INFO:root:2020-01-27 21:51:08.469320+00:00: / GET b'' returned status code: 404 in 007981 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-27 21:51:26.856843+00:00: / GET b'' returned status code: 404 in 007901 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-27 21:51:30.790805+00:00: /students/list/ GET b'' returned status code: 200 in 033784 microseconds
+INFO:root:2020-01-27 21:51:33.157132+00:00: /students/edit/1301/ GET b'' returned status code: 200 in 036980 microseconds
+INFO:root:2020-01-28 23:16:12.922050+00:00: / GET b'' returned status code: 404 in 007562 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-28 23:16:16.923826+00:00: /students/list/ GET b'' returned status code: 200 in 033838 microseconds
+INFO:root:2020-01-28 23:16:21.170334+00:00: /students/edit/1301/ GET b'' returned status code: 200 in 036485 microseconds
+INFO:root:2020-01-28 23:16:24.107452+00:00: /students/edit/1301/ POST b'csrfmiddlewaretoken=v0RwEahAE2BQFLItVfX8XPHl1DmhIlV1FAvbS1apETCWpFkmk16KrqeRgus7fhnl&first_name=Megan&last_name=Mcconnell&birth_date=1972-07-11&emails=patelmichael%40clark-dunn.biz&phone=167314147660334&address=926+Sherry+Lake+Apt.+557South+Stephanie%2C+SC+07416&groups=87&submit=' returned status code: 302 in 016783 microseconds
+INFO:root:2020-01-28 23:16:24.153175+00:00: /students/list/ GET b'' returned status code: 200 in 022424 microseconds
+INFO:root:2020-01-28 23:16:26.044275+00:00: /students/edit/1301/ GET b'' returned status code: 200 in 022264 microseconds
+INFO:root:2020-01-28 23:16:36.113114+00:00: /students/edit/1301/ POST b'csrfmiddlewaretoken=k8ggBrFHMKJDUKlb5BnEz0PHi54wVI5UuIUVPiywMBKJEEX4unwg3BmdxWamsExe&first_name=Megan&last_name=Mcconnell&birth_date=1972-07-11&emails=patelmichael%40clark-dunn.biz&phone=16731414x766sad&address=926+Sherry+Lake+Apt.+557South+Stephanie%2C+SC+07416&groups=87&submit=' returned status code: 302 in 006845 microseconds
+INFO:root:2020-01-28 23:16:36.149541+00:00: /students/list/ GET b'' returned status code: 200 in 024025 microseconds
+INFO:root:2020-01-28 23:16:39.770002+00:00: /students/edit/1301/ GET b'' returned status code: 200 in 021458 microseconds
+INFO:root:2020-01-28 23:17:17.003696+00:00: /students/edit/1301/ POST b'csrfmiddlewaretoken=LGj9Cx4c3ebvFmjlrytLdgzTzASPMXgRVgXOQoX135cBpgVeQkCnHR6pOrYFjTIb&first_name=Megan&last_name=Mcconnell&birth_date=1972-07-11&emails=patelmichael%40clark-dunn.biz&phone=16731414766&address=926+Sherry+Lake+Apt.+557South+Stephanie%2C+SC+07416&groups=87&submit=' returned status code: 302 in 008224 microseconds
+INFO:root:2020-01-28 23:17:17.038497+00:00: /students/list/ GET b'' returned status code: 200 in 020744 microseconds
+INFO:root:2020-01-28 23:17:21.042336+00:00: /students/edit/1306/ GET b'' returned status code: 200 in 023383 microseconds
+INFO:root:2020-01-28 23:17:23.937525+00:00: /students/edit/1306/ POST b'csrfmiddlewaretoken=jBljNlJJ49c5yvGT6ExKkLTGp2FZYzvStbZY1cCy40dbipiMvqGmOmqcETLPvvXc&first_name=Christine&last_name=Griffith&birth_date=2004-03-15&emails=patelmichael%40clark-dunn.biz&phone=3394663597&address=428+Cheryl+Key+Apt.+747Cunninghamborough%2C+MN+27692&groups=91&submit=' returned status code: 200 in 024624 microseconds
+INFO:root:2020-01-28 23:17:29.684453+00:00: /students/edit/1306/ GET b'' returned status code: 200 in 024665 microseconds
+INFO:root:2020-01-28 23:17:33.965165+00:00: /students/edit/1308/ GET b'' returned status code: 200 in 022257 microseconds
+INFO:root:2020-01-28 23:17:37.043774+00:00: /students/edit/1308/ POST b'csrfmiddlewaretoken=ncLkrC4qzcfKdzoCSZMABmiM4Fd094b9xMpZFtXfz3gQXt0vhLVc5XPijwjQG0Dt&first_name=Kelly&last_name=Peters&birth_date=1986-11-03&emails=gordonsherry%40hotmail.com&phone=3394663597&address=638+Carol+StationFernandezchester%2C+DC+71627&groups=87&submit=' returned status code: 200 in 025126 microseconds
+INFO:root:2020-01-28 23:17:42.274597+00:00: /students/edit/1308/ GET b'' returned status code: 200 in 021932 microseconds
+INFO:root:2020-01-28 23:17:48.257439+00:00: /teachers/list/ GET b'' returned status code: 200 in 004448 microseconds
+INFO:root:2020-01-28 23:18:02.346184+00:00: /teachers/edit/94/ GET b'' returned status code: 200 in 022627 microseconds
+INFO:root:2020-01-28 23:18:07.987418+00:00: /teachers/edit/99/ GET b'' returned status code: 200 in 015892 microseconds
+INFO:root:2020-01-28 23:18:10.402019+00:00: /teachers/edit/99/ POST b'csrfmiddlewaretoken=22zkoFnpm6tWgXxwUcDdbzUTYdgojnUPcCdZCwgemXu20R9pjYMPFarpd4meQjm9&first_name=Rodney&last_name=Lewis&email=tracy69%40price-atkinson.biz&degree=M.D.&phone=%28655%29862-8264&submit=' returned status code: 200 in 017365 microseconds
+INFO:root:2020-01-28 23:18:13.921025+00:00: /teachers/edit/99/ GET b'' returned status code: 200 in 015574 microseconds
+INFO:root:2020-01-28 23:18:19.138537+00:00: /teachers/edit/99/ GET b'' returned status code: 200 in 016389 microseconds
+INFO:root:2020-01-28 23:18:23.608541+00:00: /teachers/edit/94/ GET b'' returned status code: 200 in 016177 microseconds
+INFO:root:2020-01-28 23:18:25.607630+00:00: /teachers/edit/94/ POST b'csrfmiddlewaretoken=8YWi2PzMTJuO7Z3VwHRgGSg7N6cYNi8liyAXgGsBTAvURTFOVt0SatND2XiOkeAF&first_name=Michelle&last_name=Kim&email=tracy69%40price-atkinson.biz&degree=M.D.&phone=%28655%29862-8264&submit=' returned status code: 200 in 016942 microseconds
+ERROR:django.request:Internal Server Error: /teachers/edit/94/
+Traceback (most recent call last):
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/niko/IdeaProjects/hillel-python/src/teachers/views.py", line 54, in teachers_edit
+    return HttpResponseRedirect(reverse('teachers'))
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/urls/base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/Users/niko/IdeaProjects/hillel-python/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 673, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'teachers' not found. 'teachers' is not a valid view function or pattern name.
+INFO:root:2020-01-28 23:18:33.440628+00:00: /teachers/edit/94/ POST b'csrfmiddlewaretoken=qm04t3fveYq4585VHkkr14VTCiEcU6y7AWEJHU8kePraP2HO66t3vFspR9K2r20r&first_name=Michelle&last_name=Kim&email=tracy69%40price-atkinson.biz&degree=M.D.&phone=%28655%29863-8264&submit=' returned status code: 500 in 039210 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/views.py changed, reloading.
+INFO:root:2020-01-28 23:20:03.039311+00:00: /teachers/edit/94/ POST b'csrfmiddlewaretoken=qm04t3fveYq4585VHkkr14VTCiEcU6y7AWEJHU8kePraP2HO66t3vFspR9K2r20r&first_name=Michelle&last_name=Kim&email=tracy69%40price-atkinson.biz&degree=M.D.&phone=%28655%29863-8264&submit=' returned status code: 302 in 015756 microseconds
+INFO:root:2020-01-28 23:20:03.084831+00:00: /teachers/list/ GET b'' returned status code: 200 in 009852 microseconds
+INFO:root:2020-01-28 23:20:04.684551+00:00: /teachers/edit/92/ GET b'' returned status code: 200 in 029254 microseconds
+INFO:root:2020-01-28 23:20:09.626757+00:00: /teachers/edit/92/ POST b'csrfmiddlewaretoken=BxCqNeg7m9ewtOiDgF7R6LNMhW95mvJ3L7g5159Wm0fCdIUwFrgtAmkiwNfVTrbn&first_name=Craig&last_name=Krause&email=opena%40gmail.com&degree=M.D.&phone=%28312%29803-1525&submit=' returned status code: 302 in 005000 microseconds
+INFO:root:2020-01-28 23:20:09.662180+00:00: /teachers/list/ GET b'' returned status code: 200 in 003974 microseconds
+INFO:root:2020-01-28 23:20:11.579032+00:00: /teachers/edit/92/ GET b'' returned status code: 200 in 016231 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/teachers/models.py changed, reloading.
+INFO:root:2020-01-29 20:58:55.318659+00:00: /students/list/ GET b'' returned status code: 200 in 019042 microseconds
+INFO:root:2020-01-29 20:59:19.641405+00:00: /students/list/ GET b'' returned status code: 200 in 010933 microseconds
+INFO:root:2020-01-29 21:02:10.410837+00:00: /students/list/ GET b'' returned status code: 200 in 017522 microseconds
+INFO:root:2020-01-29 21:02:50.793876+00:00: /students/list/ GET b'' returned status code: 200 in 009436 microseconds
+INFO:django.utils.autoreload:/Users/niko/IdeaProjects/hillel-python/src/students/forms.py changed, reloading.
+INFO:root:2020-01-30 18:29:36.523953+00:00: / GET b'' returned status code: 404 in 007631 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-01-30 18:29:43.455316+00:00: /students/list/ GET b'' returned status code: 200 in 036932 microseconds
+INFO:root:2020-01-30 18:29:46.451882+00:00: /students/contact/ GET b'' returned status code: 200 in 025264 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:29:55.244775+00:00: /students/contact/ POST b'csrfmiddlewaretoken=o4cs1RvrIczLf3RuAc7klmdXy7u390G2yEQ7fIogI3ARZXtnZYgWPXKtNYATGW8m&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 099942 microseconds
+INFO:root:2020-01-30 18:34:07.329218+00:00: /students/contact/ GET b'' returned status code: 200 in 010920 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:08.322036+00:00: /students/contact/ POST b'csrfmiddlewaretoken=CQMNYZZTE7B7EHkU69f0Q6F5tRZgK36tMqqscQSIEYCdoBWNvVoCkHcBII56hZyN&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 002388 microseconds
+INFO:root:2020-01-30 18:34:08.356988+00:00: /students/list/ GET b'' returned status code: 200 in 022731 microseconds
+INFO:root:2020-01-30 18:34:12.314020+00:00: /students/list/ GET b'' returned status code: 200 in 019996 microseconds
+INFO:root:2020-01-30 18:34:15.693726+00:00: /students/contact/ GET b'' returned status code: 200 in 010591 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:16.847213+00:00: /students/contact/ POST b'csrfmiddlewaretoken=Wem5DTt6QWSsAYSw0akqm1L0da5BeBkd6O0KRKmVQNTykSuppWt2QCiws1brLxMx&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001736 microseconds
+INFO:root:2020-01-30 18:34:16.892990+00:00: /students/list/ GET b'' returned status code: 200 in 020465 microseconds
+INFO:root:2020-01-30 18:34:17.584297+00:00: /students/contact/ GET b'' returned status code: 200 in 012683 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:18.284279+00:00: /students/contact/ POST b'csrfmiddlewaretoken=nnL7IYiauGtePu8Mp0H5BnTvCIgXofCjxXpMWPbZuxukzoKFOMQH5Yq1RzmNVb4D&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001653 microseconds
+INFO:root:2020-01-30 18:34:18.328567+00:00: /students/list/ GET b'' returned status code: 200 in 021454 microseconds
+INFO:root:2020-01-30 18:34:20.141431+00:00: /students/contact/ GET b'' returned status code: 200 in 011801 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:20.773825+00:00: /students/contact/ POST b'csrfmiddlewaretoken=CP2haqF11j0WmY9DhNmnGEGEvzNLKGKMMpGWohyQ1a126SLwGzvZafdaKqTBhCc6&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 002064 microseconds
+INFO:root:2020-01-30 18:34:20.815733+00:00: /students/list/ GET b'' returned status code: 200 in 020552 microseconds
+INFO:root:2020-01-30 18:34:21.573396+00:00: /students/contact/ GET b'' returned status code: 200 in 010307 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:22.130419+00:00: /students/contact/ POST b'csrfmiddlewaretoken=vSm55RSRS2RDfNIlN25ZV9DH4YVwZtOeFs0KjILGSTSJZHkecOeBpKadjP1mwpgy&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001722 microseconds
+INFO:root:2020-01-30 18:34:22.163529+00:00: /students/list/ GET b'' returned status code: 200 in 042627 microseconds
+INFO:root:2020-01-30 18:34:22.701950+00:00: /students/contact/ GET b'' returned status code: 200 in 011397 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:23.246365+00:00: /students/contact/ POST b'csrfmiddlewaretoken=uhhAYJ04dHisjm2bohLvzRVykNATENYHERVfcATTdyjy3gE4N3U73ss4zEGJbJq1&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001663 microseconds
+INFO:root:2020-01-30 18:34:23.273737+00:00: /students/list/ GET b'' returned status code: 200 in 021000 microseconds
+INFO:root:2020-01-30 18:34:23.787120+00:00: /students/contact/ GET b'' returned status code: 200 in 011216 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:24.264958+00:00: /students/contact/ POST b'csrfmiddlewaretoken=pMLv7onwbI6SMNpdNjiv2AkRdGKTrvK8zmpalfglbz7YwH16c5r7wbRnsxQJYrcs&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001672 microseconds
+INFO:root:2020-01-30 18:34:24.295880+00:00: /students/list/ GET b'' returned status code: 200 in 020306 microseconds
+INFO:root:2020-01-30 18:34:24.853745+00:00: /students/contact/ GET b'' returned status code: 200 in 010648 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:25.390327+00:00: /students/contact/ POST b'csrfmiddlewaretoken=lDXrpGVmpqRM3sveTQkCxL1m7g0sb9BrvdB6DxObphSSNm77iCte1mySm76iI53L&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001942 microseconds
+INFO:root:2020-01-30 18:34:25.420654+00:00: /students/list/ GET b'' returned status code: 200 in 020612 microseconds
+INFO:root:2020-01-30 18:34:26.006722+00:00: /students/contact/ GET b'' returned status code: 200 in 010232 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:26.585036+00:00: /students/contact/ POST b'csrfmiddlewaretoken=LYoXzXSkhKemOQ4UmsrglHNEwMJ0g1DNVy2CNOL9hBfsyKGNLeASPikaLDPQNX57&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001980 microseconds
+INFO:root:2020-01-30 18:34:26.623616+00:00: /students/list/ GET b'' returned status code: 200 in 019603 microseconds
+INFO:root:2020-01-30 18:34:27.131096+00:00: /students/contact/ GET b'' returned status code: 200 in 015573 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:27.643029+00:00: /students/contact/ POST b'csrfmiddlewaretoken=QF6voSIEyziB8Q1WSfCTQWH6iMrRGzMk0fKaCJBtyqjHSKDPh1LvkxeCxDxHdveE&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001750 microseconds
+INFO:root:2020-01-30 18:34:27.673054+00:00: /students/list/ GET b'' returned status code: 200 in 019864 microseconds
+INFO:root:2020-01-30 18:34:28.160835+00:00: /students/contact/ GET b'' returned status code: 200 in 011901 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:28.740463+00:00: /students/contact/ POST b'csrfmiddlewaretoken=FrGlkHWbJvv4cMxdyiPaqJOBfxPu2msVP1k0yyP0JmwaWG96X4YMUkl7uoVkziUf&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 002106 microseconds
+INFO:root:2020-01-30 18:34:28.783848+00:00: /students/list/ GET b'' returned status code: 200 in 021075 microseconds
+INFO:root:2020-01-30 18:34:29.275235+00:00: /students/contact/ GET b'' returned status code: 200 in 010736 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:29.867625+00:00: /students/contact/ POST b'csrfmiddlewaretoken=YZT354Fi2NWsqnlkeIsNCUOf33LIwks48zxIjVy72EXyahXdDuBp6vlLiURy3gUo&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001830 microseconds
+INFO:root:2020-01-30 18:34:29.897790+00:00: /students/list/ GET b'' returned status code: 200 in 019653 microseconds
+INFO:root:2020-01-30 18:34:30.428551+00:00: /students/contact/ GET b'' returned status code: 200 in 015358 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:34:31.007395+00:00: /students/contact/ POST b'csrfmiddlewaretoken=meJFKuXwn5tRS4McMNFwppGT0Op4ukILwOnkYlQlnWuXCYo5bzO8T0dpfFvU1ga5&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001682 microseconds
+INFO:root:2020-01-30 18:34:31.044309+00:00: /students/list/ GET b'' returned status code: 200 in 020356 microseconds
+INFO:root:2020-01-30 18:36:39.104695+00:00: /students/contact/ GET b'' returned status code: 200 in 010051 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:36:40.085100+00:00: /students/contact/ POST b'csrfmiddlewaretoken=DnC66znKaMGv0LaL6FVEpLKtHzyyEK3XNXgLkqgzaDHBKFMEvr4gTmhZWqEobGvh&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001703 microseconds
+INFO:root:2020-01-30 18:36:40.115805+00:00: /students/list/ GET b'' returned status code: 200 in 021680 microseconds
+INFO:root:2020-01-30 18:36:47.468838+00:00: /students/contact/ GET b'' returned status code: 200 in 010435 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:36:48.267205+00:00: /students/contact/ POST b'csrfmiddlewaretoken=A1RTQ5E5uHYwvhEeWxAiOFLok7r10d9AKBvy4WxUuyZCfbg7ljJUigiUzYxRx9BU&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001682 microseconds
+INFO:root:2020-01-30 18:36:48.307453+00:00: /students/list/ GET b'' returned status code: 200 in 019916 microseconds
+INFO:root:2020-01-30 18:36:49.354679+00:00: /students/contact/ GET b'' returned status code: 200 in 010513 microseconds
+INFO:root:USER CONTACTED WITH MAIL: koleskolia@yandex.ru AND SUBJECT: hello
+INFO:root:2020-01-30 18:36:50.190921+00:00: /students/contact/ POST b'csrfmiddlewaretoken=qPw9By6GTpM3m8K0nxFpMudlx5zc4Q8bApaOPpZvTgN962mTMjO1g5KRMWF2BMAv&email=koleskolia%40yandex.ru&subject=hello&text=asdfdsafds&submit=' returned status code: 302 in 001638 microseconds
+INFO:root:2020-01-30 18:36:50.224216+00:00: /students/list/ GET b'' returned status code: 200 in 020506 microseconds
+INFO:root:USER CONTACTED WITH MAIL: kolesnik@ss.ua AND SUBJECT: subject
+INFO:root:2020-01-30 19:16:08.105381+00:00: /students/contact/ POST b'--BoUnDaRyStRiNg\r\nContent-Disposition: form-data; name="email"\r\n\r\nkolesnik@ss.ua\r\n--BoUnDaRyStRiNg\r\nContent-Disposition: form-data; name="subject"\r\n\r\nsubject\r\n--BoUnDaRyStRiNg\r\nContent-Disposition: form-data; name="text"\r\n\r\ntext\r\n--BoUnDaRyStRiNg--\r\n' returned status code: 302 in 144312 microseconds
+INFO:root:2020-01-30 19:16:08.253375+00:00: /students/list/ GET b'' returned status code: 200 in 006614 microseconds
+INFO:root:2020-01-30 19:16:55.831754+00:00: /students/contact/ GET b'' returned status code: 200 in 024493 microseconds
+INFO:root:2020-01-30 19:16:55.858730+00:00: /students/list/ GET b'' returned status code: 200 in 002204 microseconds
+INFO:root:2020-01-30 19:17:07.672303+00:00: /students/contact/ GET b'' returned status code: 200 in 021218 microseconds
+INFO:root:2020-01-30 19:17:07.695942+00:00: /students/list/ GET b'' returned status code: 200 in 002044 microseconds
+INFO:root:2020-02-06 16:07:18.373716+00:00: / GET b'' returned status code: 404 in 008849 microseconds
+WARNING:django.request:Not Found: /
+INFO:root:2020-02-06 16:07:18.591972+00:00: /favicon.ico GET b'' returned status code: 404 in 002790 microseconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:2020-02-06 16:07:24.154988+00:00: /students/list/ GET b'' returned status code: 200 in 035777 microseconds
+INFO:root:2020-02-06 16:07:26.995354+00:00: /students/list/ GET b'' returned status code: 200 in 022707 microseconds
+INFO:root:2020-02-06 16:07:27.808828+00:00: /students/list/ GET b'' returned status code: 200 in 020442 microseconds
+INFO:root:2020-02-06 16:07:28.353832+00:00: /students/list/ GET b'' returned status code: 200 in 020914 microseconds

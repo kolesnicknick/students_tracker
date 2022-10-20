@@ -1,14 +1,17 @@
-
 from django.db import models
 from faker import Faker
 from faker.generator import random
 
 
 class Teacher(models.Model):
+    DEGREE = (
+        (1, 'A.S.'), (2, 'M.S.'), (3, 'Ph.D.'), (4, 'J.D.'), (5, 'M.D.')
+    )
+
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     email = models.EmailField()
-    degree = models.CharField(max_length=20, null=True, blank=True)
+    degree = models.PositiveSmallIntegerField(choices=DEGREE, default=1)
     phone = models.CharField(max_length=16)
 
     def get_info(self):
@@ -23,7 +26,7 @@ class Teacher(models.Model):
         teacher = cls(
             first_name=fake.first_name(),
             last_name=fake.last_name(),
-            degree=random.choice(('A.S.', 'M.S.', 'Ph.D.', 'J.D.', 'M.D.')),
+            degree=random.randint(1, 5),
             email=fake.email(),
             phone=fake.phone_number(),
         )
